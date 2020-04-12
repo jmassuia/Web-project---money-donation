@@ -2,7 +2,6 @@ const connection = require('../database/connection')
 
 module.exports={
     async index(req, res){
-
         const incidents = await connection('incidents')
         .join('ongs', 'ongs.id', '=', 'incidents.id_incident')
         .select(['incidents.*', 'ongs.name', 'ongs.email', 'ongs.phone'])
