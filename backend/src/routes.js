@@ -4,16 +4,22 @@ const {Router} = require('express');
 const volunteerController = require('./controller/volunteerController');
 const ongsController = require('./controller/ongController');
 const incidentController = require('./controller/incidentController');
+const sessionController = require('./controller/sessionController');
+
 const routes = Router();
 
 //*************************routes*************************/
-// Informações do usuário
+// Doadores
 routes.get('/users',volunteerController.index);
 routes.post('/users',volunteerController.store);
-// Cadastro de Nova ONG
+// ONGs
 routes.get('/ongs',ongsController.index);
 routes.post('/ongs',ongsController.store);
-// Cadastro de novo caso
+routes.post('/session',sessionController.session);
+// Casos
 routes.get('/incident',incidentController.index)
 routes.post('/incident',incidentController.store)
+routes.delete('/incident/:id',incidentController.delete)
+
+
 module.exports = routes;
