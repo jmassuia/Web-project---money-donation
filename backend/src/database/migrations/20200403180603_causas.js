@@ -6,6 +6,7 @@ exports.up = function(knex) {
         
         table.string('title').notNullable();
         table.string('description').notNullable();
+        table.decimal('valueGol').notNullable();
         table.string('ong_id').notNullable();
 
         table.foreign('ong_id').references('id').inTable('ongs');
