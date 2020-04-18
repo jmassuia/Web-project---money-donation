@@ -11,13 +11,17 @@ module.exports={
     },
 
     async store(req, res){
-        const {title, description} = req.body
+        const {title, description, valueGol} = req.body
 
         const ong_id = req.headers.authorization
 
+        if(!ong_id){
+            res.status(401).json({error: "Operation not authorazed!"});
+        }
         const [id] = await connection('incidents').insert({
             title,
             description,
+            valueGol,
             ong_id
         })
         return res.json({message: `O caso com o titulo: ${title} foi criado com o id:${id}`})

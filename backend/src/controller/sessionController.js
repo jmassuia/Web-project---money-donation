@@ -10,9 +10,22 @@ module.exports = {
         .select('id')
 
         if(!id){
-           return res.status(404).json({error:"ONG doesn't exists!!"})
-        }
+            return res.status(404).json({error:"ONG doesn't exists!!"})
+         }
 
         return res.json({ong_id: id})
+    },
+    async show(req,res){
+        const ong_id = req.headers.authorization;
+
+        const incident = await connection('incidents')
+        .where('ong_id',ong_id)
+        .select('*');
+        
+        if(incident==""){
+            return res.status(404).json({err:'No incidents found!'});
+        }
+
+        return res.json({incident});
     }
 }

@@ -3,8 +3,10 @@ const connection = require('../database/connection');
 
 module.exports={
     async index(req,res){
-        const volunteer = await connection('volunteer').select('*');
-
+        const volunteer = await connection('volunteer')
+        .limit(3)
+        .select('*');
+        
         return res.json({volunteer});
 
     },

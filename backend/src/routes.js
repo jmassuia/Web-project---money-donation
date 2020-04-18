@@ -14,6 +14,7 @@ routes.get('/users',volunteerController.index);
 routes.post('/users',volunteerController.store);
 // ONGs
 routes.get('/ongs',ongsController.index);
+routes.get('/session',sessionController.show);
 routes.post('/ongs',ongsController.store);
 routes.post('/session',sessionController.session);
 // Casos
