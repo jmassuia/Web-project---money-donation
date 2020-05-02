@@ -1,11 +1,12 @@
 const express = require('express');
+const cors = require('cors');
+
 const routes = require('./routes');
-//const path = require('path');
 
 const app = express();
 const port = 6767;
 
-
+app.use(cors());
 // app utilizando body-parser para receber informações do form
 app.use(express.urlencoded({
     extended:false

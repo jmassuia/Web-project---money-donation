@@ -13,7 +13,7 @@ module.exports = {
             return res.status(404).json({error:"ONG doesn't exists!!"})
          }
 
-        return res.json({ong_id: id})
+        return res.json({id});
     },
     async show(req,res){
         const ong_id = req.headers.authorization;

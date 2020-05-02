@@ -15,9 +15,21 @@
 }
 
 .form .block-registration{
+    margin: 10px 85px 5px 85px;
     color: #333;
     font-size: 16px;
-    margin: 10px 85px 5px 85px;
+    opacity: 0.8;
+}
+.form .row .col .block-registration{
+    margin: 10px 10px 0px 85px;
+    width: 250px;
+}
+
+.form .row .col .block-4{
+    margin-left: 60px;
+}
+.form .row .col .block-5{
+    width: 630px;
 }
 .form .block-registration .input:hover{
     border-bottom: 3px solid orange;
