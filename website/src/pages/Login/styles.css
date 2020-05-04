@@ -30,11 +30,14 @@
     opacity: 0.8;
 }
 .block-login .inputs{
+    color: black;
     width: 500px;
 }
-.block-login .inputs:hover{
-    color: black;
+.block-login .inputs:focus{
+    border-color: lightslategray;
     border-bottom: 3px solid orange;
+    -webkit-box-shadow: none;
+    outline: none;
 }
 
 .form .button-login{

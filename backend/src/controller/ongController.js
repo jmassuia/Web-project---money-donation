@@ -22,7 +22,7 @@ module.exports={
                 phone,
                 bankAgency,
                 bankAccount,
-                password,
+                password
             });
             return res.json({message: `Ong ${name} cadastrada com sucesso!`});
         }

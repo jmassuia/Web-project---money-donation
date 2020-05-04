@@ -43,6 +43,7 @@ export default function Login(){
                     <Form.Control type="email" className="inputs" placeholder="Insira o e-mail da ONG"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
+                        required
                     />
                 </Form.Group>
                 <Form.Group className="block-login">
@@ -50,6 +51,7 @@ export default function Login(){
                     <Form.Control className="inputs" type="password" placeholder="Insira sua senha" 
                         value={password}
                         onChange={e => setPassword(e.target.value)}
+                        required
                     />
                 </Form.Group>
                 <Button className="block-login button-login" variant="" type="submit">
