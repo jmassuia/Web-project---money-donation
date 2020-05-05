@@ -6,6 +6,9 @@ const ongsController = require('./controller/ongController');
 const incidentController = require('./controller/incidentController');
 const sessionController = require('./controller/sessionController');
 
+//Checkout
+const checkoutController = require('./controller/checkoutController')
+
 const routes = Router();
 
 //*************************routes*************************/
@@ -21,6 +24,8 @@ routes.post('/session',sessionController.session);
 routes.get('/incident',incidentController.index)
 routes.post('/incident',incidentController.store)
 routes.delete('/incident/:id',incidentController.delete)
+
+routes.get('/checkout', checkoutController.checkout)
 
 
 module.exports = routes;
