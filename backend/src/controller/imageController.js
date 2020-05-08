@@ -3,7 +3,7 @@ var multer = require('multer');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-    cb(null, '.website/src/Assets')
+    cb(null, 'website/src/Assets')
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + '-' +file.originalname )
@@ -25,6 +25,6 @@ module.exports = {
                     return res.status(200).send(req.file)
             });
         }
-
+        
 }
 

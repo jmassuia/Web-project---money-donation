@@ -16,10 +16,7 @@ export default function OngPage(){
    async function fileUploadHandler(e){
        e.preventDefault();
 
-       const fd = new FormData()
-        fd.append('inputimg', image)
-
-        const result = await api.post('upload',fd);
+        const result = await api.post('upload',image);
         console.log(result);
     }
     return(
