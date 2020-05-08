@@ -1,26 +1,26 @@
 import React, {useState} from 'react'
 
 import './styles.css'
-import axios from 'axios'
 import { FiUpload } from 'react-icons/fi'
 import {Button,Form, Card} from 'react-bootstrap'
 import logo from '../../Assets/Caritas_Brand.png'
 import Title from '../../Assets/Escrita 1.png'
 import logoCard from '../../Assets/LogoCard.png'
 import buttonImg from '../../Assets/Botão.png'
+import api from '../../services/api'
 
 export default function OngPage(){
-   let [selectedFile, changeselectedFile] = useState()
-    let fileSelectedHandler = event =>{
-        changeselectedFile(event.target.files[0])
-    }
-    let fileUploadHandler =() =>{
-        const fd = new FormData()
-        fd.append('image', selectedFile, selectedFile.name)
-        axios.post('', fd)
-        .then(res=>{
-            console.log(res)
-        })
+   const [image, setImage] = useState();
+
+
+   async function fileUploadHandler(e){
+       e.preventDefault();
+
+       const fd = new FormData()
+        fd.append('inputimg', image)
+
+        const result = await api.post('upload',fd);
+        console.log(result);
     }
     return(
         <div className="formBackground">
@@ -65,7 +65,14 @@ export default function OngPage(){
                     <div className="icon">
                         <FiUpload className="fiIcon"></FiUpload>
                     </div>
-                    <Form.Control name="inputimg" type="file" className="inputimg" onChange={fileSelectedHandler} ></Form.Control>
+                    <Form.Control 
+                    name="inputimg"
+                    value={image} 
+                    type="file" 
+                    className="inputimg" 
+                    onChange={e => setImage(e.target.value)}>
+
+                    </Form.Control>
                     
                 </Form.Group>
                 <Button onClick={fileUploadHandler}>upload</Button>

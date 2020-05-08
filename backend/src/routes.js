@@ -5,6 +5,7 @@ const volunteerController = require('./controller/volunteerController');
 const ongsController = require('./controller/ongController');
 const incidentController = require('./controller/incidentController');
 const sessionController = require('./controller/sessionController');
+const imageController = require('./controller/imageController');
 
 //Checkout
 const checkoutController = require('./controller/checkoutController')
@@ -20,6 +21,7 @@ routes.get('/ongs',ongsController.index);
 routes.get('/session',sessionController.show);
 routes.post('/ongs',ongsController.store);
 routes.post('/session',sessionController.session);
+routes.post('/upload',imageController.store);
 // Casos
 routes.get('/incident',incidentController.index)
 routes.post('/incident',incidentController.store)
