@@ -4,11 +4,10 @@
     max-width: 1120px;
     outline: 0;
 }
-body{
-    display: flex;
-    justify-content: center;
-}
 .formBackground{
+    position: absolute;
+    left: 28%;
+    top: 10%;
     display: flex;
     justify-content: center;
     position: absolute;
