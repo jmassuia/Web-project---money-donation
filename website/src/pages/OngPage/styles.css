@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1120px;
+    outline: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.formBackground{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: 314px;
+    width: 900px;
+    height: 1000px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 10px 10px 10px;
+}
+.flexInputs{
+    margin-top: 0px;
+    display: flex;
+    flex-grow: 1;
+    flex: 1;
+}
+.bankInputs{
+    display: block;
+}
+
+.bankInputs .label{
+    text-shadow: black;
+    
+}
+.bankInputs .input-bank{
+    width: 195px;
+    height: 43px;
+    border: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 14px;
+}
+.Form .input2{
+    width: 819px;
+    height: 43px;
+}
+.Form .inputimg{
+    overflow: hidden;
+    opacity: 0;
+    width: 260px;
+    height: 240px;
+}
+.Form .imgLabel{
+    margin-top: 82px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.5px;
+    line-height: 26px;
+}
+.Form .fiIcon{
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+}
+.Form .icon{
+    pointer-events: none;
+    background: transparent;
+    position: absolute;
+}
+.Form .imageInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 240px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-image: url("C:/Users/Pichau/Documents/GitHub/Web-project---money-donation/website/src/Assets/Logo-Greyscale1.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 150px 147px;
+}
+.Form .textInput{
+    width: 398px;
+    height: 130px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: left;
+}
+.Form .cardImg{
+    width: 242px;
+    height: 86px;
+}
+.Form .ongCard{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 550px;
+    top: 350px;
+    width: 290px;
+    height: 379px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 43px;
+}
+.Form .doediv{
+    position: absolute;
+    top: 327px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 15px 10px -15px #111;  
+}
+.Form .ongImgDiv{
+    width: 242px;
+    height: 86px;
+    background: #EAEAEA;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+}
+.Form .ongImgDiv .cardImg{
+    width: 88px;
+    height: 86px;
+}
+.Form .label{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.5px;
+    line-height: 26px;
+}
+.Form .doeButton{
+    position: absolute;
+    top: 290px;
+    width: 242px;
+    height: 113.94px;
+}
+.Form .saveButton{
+    width: 198px;
+    height: 52px;
+    background: #61BAF1;
+    border: 1px solid #61BAF1;
+    box-sizing: border-box;
+    border-radius: 10px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+}
+.Form .buttonDiv{
+    margin-top: 69px;
+    display: flex;
+    justify-content: center;
+}
