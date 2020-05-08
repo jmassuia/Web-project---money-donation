@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import './styles.css'
+import axios from 'axios'
 import { FiUpload } from 'react-icons/fi'
 import {Button,Form, Card} from 'react-bootstrap'
 import logo from '../../Assets/Caritas_Brand.png'
@@ -9,8 +10,17 @@ import logoCard from '../../Assets/LogoCard.png'
 import buttonImg from '../../Assets/Botão.png'
 
 export default function OngPage(){
+   let [selectedFile, changeselectedFile] = useState()
     let fileSelectedHandler = event =>{
-        console.log(event.target.files[0])
+        changeselectedFile(event.target.files[0])
+    }
+    let fileUploadHandler =() =>{
+        const fd = new FormData()
+        fd.append('image', selectedFile, selectedFile.name)
+        axios.post('', fd)
+        .then(res=>{
+            console.log(res)
+        })
     }
     return(
         <div className="formBackground">
@@ -58,6 +68,7 @@ export default function OngPage(){
                     <Form.Control name="inputimg" type="file" className="inputimg" onChange={fileSelectedHandler} ></Form.Control>
                     
                 </Form.Group>
+                <Button onClick={fileUploadHandler}>upload</Button>
                 <Form.Label className="label">Texto</Form.Label>
                 <Form.Control type="textarea" className="textInput" placeholder="Insira aqui a descrição da sua ONG"></Form.Control>
                 <Card className="ongCard">
@@ -72,6 +83,7 @@ export default function OngPage(){
                         </Card.Text>
                         
                     </Card.Body>
+                    <div className="doediv"></div>
                     <Card.Img className="doeButton" src={buttonImg}/>
                 </Card>
                 <div className="buttonDiv">
