@@ -3,6 +3,11 @@ const cors = require('cors');
 
 const routes = require('./routes');
 
+//habilita o uso das variaveis de ambiente do arquivo .env
+require('dotenv-safe').config()
+
+//const path = require('path');
+
 const app = express();
 const port = 6767;
 
@@ -13,6 +18,7 @@ app.use(express.urlencoded({
 }));
 // App esta utilizando express e a estrutura de dados json
 app.use(express.json());
+
 // Arquivos estatico, utilizados apenas se a aplicação precisar rodar no server
 /*app.get('/', (req,res)=>{
     res.sendFile(path.join(__dirname,'public','index.html'));

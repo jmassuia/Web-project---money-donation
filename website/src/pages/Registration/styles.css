@@ -3,7 +3,7 @@
     position: absolute;
     margin: 80px 200px 100px 270px;
     width: 800px;
-    height: 650px;
+    height: 750px;
     align-content: center;
     background-color: white;
     border-radius: 8px;
@@ -25,23 +25,37 @@
     width: 250px;
 }
 
+.form .row-2{
+    margin-left: 2px;
+}
 .form .row .col .block-4{
     margin-left: 60px;
 }
-.form .row .col .block-5{
+.form .row .block-5{
+    margin-right: 0px;
+    width: 250px;
+}
+.form .row .block-6{
+    margin-left: 125px;
+    width: 250px;
+}
+.form .block-7{
     width: 630px;
 }
-.form .block-registration .input:hover{
+.form .block-registration .input:focus{
+    color: black;
+    border-color: lightslategray;
     border-bottom: 3px solid orange;
+    -webkit-box-shadow: none;
+    outline: none;
 }
-
 .form .button{
     margin-left: 265px;
     width: 250px;
     height: 50px;
     color: white;
     background-color: rgba(255, 172, 0, 0.9);
-    margin-top: 30px;
+    margin-top: 60px;
     opacity: 0.8;
 }
 
