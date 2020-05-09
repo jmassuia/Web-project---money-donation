@@ -76,6 +76,13 @@ div .imgLabel{
     font-size: 16px;
     line-height: 26px;
 }
+.formBackground .logOff{
+    background-color: #c4c4c4;
+    border-radius: 4PX;
+    height: 30px;
+    width: 30px;
+    color: rgb(7, 132, 209);
+}
 .fiIcon{
     width: 30px;
     height: 30px;
@@ -168,6 +175,7 @@ div .imageInput{
 .Form .saveButton{
     width: 198px;
     height: 52px;
+    margin-left: 200px;
     background: #61BAF1;
     border: 1px solid #61BAF1;
     box-sizing: border-box;
@@ -180,10 +188,8 @@ div .imageInput{
     line-height: 28px;
 
     color: #FFFFFF;
-}
-.Form .buttonDiv{
+
     margin-top: 69px;
     display: flex;
     justify-content: center;
-    margin-right: 180px;
 }
