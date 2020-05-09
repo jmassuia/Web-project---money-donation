@@ -16,7 +16,7 @@ export default function OngPage(){
     const [url, setUrl] = useState([]);
     const [incidents, setIncidents] = useState([]);
     useEffect(()=>{
-        api.get('/incident?ong_id=1',{headers: {
+        api.get('/incident',{headers: {
             authorization: ong_id
         }
         }).then(response=>{
