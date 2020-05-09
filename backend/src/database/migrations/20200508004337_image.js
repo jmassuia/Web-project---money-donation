@@ -6,7 +6,8 @@ exports.up = function(knex) {
         table.string('ong_id').notNullable();
         table.string('fileName').notNullable();
         table.binary('source');
-
+        table.string('url').notNullable();
+        
         table.foreign('ong_id').references('id').inTable('ongs');
 
     });

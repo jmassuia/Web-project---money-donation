@@ -4,14 +4,16 @@ module.exports={
     async store(req,res){ 
         const ong_id = req.headers.authorization;
 
-        const {originalname:fileName, size:source} = req.file;
+        const {originalname:fileName, size:source, path:url} = req.file;
 
-            const data =  await connection('images').insert({
+            const [data] =  await connection('images').insert({
                 ong_id,
                 fileName,
-                source
+                source,
+                url
             });
-            console.log(data)
+            console.log(req.file)
             return res.json(data);
         }
+    
 }   
