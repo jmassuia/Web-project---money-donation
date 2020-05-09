@@ -1,11 +1,12 @@
 import React,{useState} from 'react'
 
-import './styles.css';
 import {Button,Form} from 'react-bootstrap';
 import logo from '../../Assets/Caritas_Brand.png';
 import Title from '../../Assets/Escrita 1.png';
-
 import api from '../../services/api';
+
+import './styles.css';
+
 
 export default function Login(){
     const [email,setEmail] = useState('');
@@ -24,7 +25,7 @@ export default function Login(){
 
         try{
             const response = await api.post('session',ongData);
-            localStorage.setItem('auth',response.data.id.id);
+            localStorage.setItem('ong_id',response.data.id.id);
         }
         catch(err){
             alert('O email e/ou senha inserida não existem!!');

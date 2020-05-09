@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
 
-import './styles.css';
 import {Button,Form,Col} from 'react-bootstrap';
 import logo from '../../Assets/Caritas_Brand.png'
 import Title from '../../Assets/Escrita 1.png'
-
 import api from '../../services/api';
+
+import './styles.css';
 
 export default function Registration(){
 

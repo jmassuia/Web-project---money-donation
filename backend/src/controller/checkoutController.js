@@ -21,13 +21,13 @@ module.exports = {
         //centavos ou 1R$
         //para passar na url usa:
         //http://localhost:6767/checkout?price=0.01&description=%22boneca%20infl%C3%A1vel%20de%20an%C3%A3o%20careca%22&quantity=2
-        const { description, price, quantity } = req.query;
+        const { title, description, price, quantity } = req.body;
 
         //Create purchase item object template
         const purchaseOrder = {
             items: [
               {
-                title: description,
+                title: title,
                 description : description,
                 quantity: parseInt(quantity),
                 currency_id: 'BRL',
@@ -35,15 +35,15 @@ module.exports = {
               }
             ]
           }
-      
+  
           //ah perai, nunca deixa essas coisa de configuracao do mercado pago hardcoded, deixa em variavel de ambiente, 
-
+/*        // This code below is part of the frontend
           try {
             //Depois de configurado, aqui vc cria o pedido
             const preference = await MercadoPago.preferences.create(purchaseOrder);
             return res.redirect(`${preference.body.init_point}`);
           }catch(err){
             return res.send(err.message);
-          }
+          }*/
     }
 }
