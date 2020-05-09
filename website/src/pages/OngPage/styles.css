@@ -1,6 +1,6 @@
 *{
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
     max-width: 1120px;
     outline: 0;
 }
@@ -11,79 +11,104 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    margin-top: 314px;
-    width: 900px;
-    height: 1000px;
+    width: 1500px;
+    height: 600px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px 10px 10px 10px;
+    opacity: 0.97;
 }
 .flexInputs{
-    margin-top: 0px;
+    margin-top: 30px;
     display: flex;
     flex-grow: 1;
     flex: 1;
 }
-.bankInputs{
+.flexInputs .bankInputs{
     display: block;
 }
 
-.bankInputs .label{
-    text-shadow: black;
-    
+.flexInputs .bankInputs .label{
+    text-shadow: rgb(0, 0, 0)05, 50, 50);
+    font-size: 14px;
 }
 .bankInputs .input-bank{
     width: 195px;
-    height: 43px;
+    height: 30px;
     border: 1px solid #c4c4c4;
     box-sizing: border-box;
     border-radius: 5px;
     margin-right: 14px;
 }
+.bankInputs .input-bank:focus{
+    border-color: #fff;
+    border-bottom: 3px solid orange;
+    -webkit-box-shadow: none;
+    outline: none;
+}
 .Form .input2{
     width: 819px;
-    height: 43px;
+    height: 30px;
+
 }
-.Form .inputimg{
+.Form .input2:focus{
+    border-color: #fff;
+    border-bottom: 3px solid orange;
+    -webkit-box-shadow: none;
+    outline: none;
+}
+div .inputimg{
     overflow: hidden;
     opacity: 0;
     width: 260px;
     height: 240px;
 }
-.Form .imgLabel{
-    margin-top: 82px;
+div .imgPreview img{
+    display:absolute;
+    width: 130px;
+    margin-right: 10px;
+    height: 110px;
+    opacity: 0.9;
+}
+div .imgLabel{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 22.5px;
+    font-size: 16px;
     line-height: 26px;
 }
-.Form .fiIcon{
+.formBackground .logOff{
+    background-color: #c4c4c4;
+    border-radius: 4PX;
+    height: 30px;
+    width: 30px;
+    color: rgb(7, 132, 209);
+}
+.fiIcon{
     width: 30px;
     height: 30px;
     pointer-events: none;
-}
-.Form .icon{
     pointer-events: none;
     background: transparent;
     position: absolute;
 }
-.Form .imageInput{
+div .imageInput{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 260px;
-    height: 240px;
-    background: #FFFFFF;
+    width: 160px;
+    height: 140px;
+    background: rgb(238, 238, 238);
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius:50%;
     /*background-image: url("C:/Users/Pichau/Documents/GitHub/Web-project---money-donation/website/src/Assets/Logo-Greyscale1.png");*/
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
     background-size: 150px 147px;
+    margin-right: 55px;
 }
 .Form .textInput{
     width: 398px;
@@ -93,6 +118,12 @@
     box-sizing: border-box;
     border-radius: 5px;
     text-align: left;
+}
+.Form .textInput:focus{
+    border-color: #fff;
+    border: 2px solid orange;
+    -webkit-box-shadow: none;
+    outline: none;
 }
 .Form .cardImg{
     width: 242px;
@@ -134,7 +165,7 @@
 .Form .label{
     font-style: normal;
     font-weight: normal;
-    font-size: 22.5px;
+    font-size: 16px;
     line-height: 26px;
 }
 .Form .doeButton{
@@ -146,6 +177,7 @@
 .Form .saveButton{
     width: 198px;
     height: 52px;
+    margin-left: 200px;
     background: #61BAF1;
     border: 1px solid #61BAF1;
     box-sizing: border-box;
@@ -158,8 +190,7 @@
     line-height: 28px;
 
     color: #FFFFFF;
-}
-.Form .buttonDiv{
+
     margin-top: 69px;
     display: flex;
     justify-content: center;
