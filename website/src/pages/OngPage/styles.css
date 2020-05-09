@@ -67,13 +67,13 @@ div .inputimg{
     height: 240px;
 }
 div .imgPreview img{
-    display:absolute;
-    width: 130px;
-    margin-right: 10px;
-    height: 110px;
+    width: 160px;
+    height: 140px;
     opacity: 0.9;
+    border-radius: 50%;
 }
 div .imgLabel{
+    margin-top: 82px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
