@@ -10,7 +10,6 @@ const sessionController = require('./controller/sessionController');
 const imageController = require('./controller/imageController');
 
 //Checkout
-const checkoutController = require('./controller/checkoutController')
 
 const routes = Router();
 
@@ -18,6 +17,7 @@ const routes = Router();
 // Doadores
 routes.get('/users',volunteerController.index);
 routes.post('/users',volunteerController.store);
+
 // ONGs
 routes.get('/ongs',ongsController.index);
 routes.get('/session',sessionController.show);
@@ -33,7 +33,12 @@ routes.get('/incident',incidentController.index)
 routes.post('/incident',incidentController.store)
 routes.delete('/incident/:id',incidentController.delete)
 
-routes.get('/checkout', checkoutController.checkout)
+// Casos
+routes.get('/incident',incidentController.index);
+routes.post('/incident',incidentController.store);
+routes.delete('/incident/:id',incidentController.delete);
+// Donation
+routes.post('/donation',donation.checkout);
 
 
 module.exports = routes;

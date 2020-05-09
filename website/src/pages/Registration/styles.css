@@ -1,7 +1,9 @@
 
 .container-Registration{
     position: absolute;
-    margin: 80px 200px 100px 270px;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%,-50%);
     width: 800px;
     height: 750px;
     align-content: center;
@@ -44,7 +46,7 @@
 }
 .form .block-registration .input:focus{
     color: black;
-    border-color: lightslategray;
+    border-color: #fff;
     border-bottom: 3px solid orange;
     -webkit-box-shadow: none;
     outline: none;
