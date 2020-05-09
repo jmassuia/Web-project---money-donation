@@ -36,10 +36,9 @@
     width: 500px;
 }
 .block-login .inputs:focus{
-    border-color: lightslategray;
+    border-color: #fff;
     border-bottom: 3px solid orange;
     -webkit-box-shadow: none;
-    box-shadow: none;
     outline: none;
 }
 
