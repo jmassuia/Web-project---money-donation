@@ -44,7 +44,7 @@
 }
 .form .block-registration .input:focus{
     color: black;
-    border-color: #fff;
+    border-color: lightslategray;
     border-bottom: 3px solid orange;
     -webkit-box-shadow: none;
     outline: none;

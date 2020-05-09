@@ -1,19 +1,30 @@
 const connection = require('../database/connection');
+var multer = require('multer');
 
-module.exports={
-    async store(req,res){ 
-        const ong_id = req.headers.authorization;
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+    cb(null, 'website/src/Assets')
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' +file.originalname )
+  }
+});
+var upload = multer({ storage: storage }).single('file');
 
-        const {originalname:fileName, size:source, path:url} = req.file;
 
-            const [data] =  await connection('images').insert({
-                ong_id,
-                fileName,
-                source,
-                url
+module.exports = {
+
+    async store(req,res){
+
+        upload(req, res, function (err) {
+            if (err instanceof multer.MulterError) {
+                return res.status(500).json(err)
+            } else if (err) {
+                return res.status(500).json(err)
+            }
+                    return res.status(200).send(req.file)
             });
-            console.log(req.file)
-            return res.json(data);
         }
-    
-}   
+        
+}
+
