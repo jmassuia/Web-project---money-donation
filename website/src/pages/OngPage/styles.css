@@ -198,3 +198,21 @@ div .imageInput{
     display: flex;
     justify-content: center;
 }
+.casesBG{
+    width: 1500px;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-0%);
+    background-color: white;
+    opacity: 0.97;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 10px 10px 10px;
+    opacity: 0.9;
+}
+ul{
+    margin-left: 15px;
+}

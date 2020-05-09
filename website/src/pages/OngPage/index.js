@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { FiUpload, FiPower } from 'react-icons/fi'
+import { FiUpload, FiPower, FiTrash2 } from 'react-icons/fi'
 import {Button,Form, Card} from 'react-bootstrap'
 import logo from '../../Assets/Caritas_Brand.png'
 import Title from '../../Assets/Escrita 1.png'
@@ -11,18 +11,20 @@ import api from '../../services/api'
 import './styles.css'
 
 export default function OngPage(){
+    const ong_id = 1; //overwrite with localStorage.getItem('ong_id');
     const [picture, setPicture] = useState([]);
     const [url, setUrl] = useState([]);
     const [incidents, setIncidents] = useState([]);
     useEffect(()=>{
-        api.get('profile',{headers: {
-            authorization: ongId
+        api.get('/incident?ong_id=1',{headers: {
+            authorization: ong_id
         }
         }).then(response=>{
             setIncidents(response.data)
         })
 
-    }, [ongId])
+    }, [ong_id])
+    console.log(ong_id)
    
     function onChangeHandler(e){
        setPicture([...picture, e.target.files[0]]);
@@ -31,7 +33,7 @@ export default function OngPage(){
    async function fileUploadHandler(e){
        e.preventDefault();
 
-        const ong_id = localStorage.getItem('ong_id'); //overwrite with localStorage.getItem('ong_id');
+        
 
 
         const data = new FormData()
@@ -51,6 +53,7 @@ export default function OngPage(){
     }
     
     return(
+        <div className="all">
         <div className="formBackground">
             <FiPower className="logOff"size={25}/>
             <div>
@@ -102,6 +105,28 @@ export default function OngPage(){
                 </Form.Group>
                 <Button className="saveButton" onClick={fileUploadHandler}>Salvar</Button>
             </Form>
+            
+        </div>
+        
+        <div className="casesBG">
+                <div className="cases">
+                    <ul>
+                        {incidents.map(incident => (
+                            <li key={incident.id}>
+                                <strong>CASO:</strong>
+                                <p> {incident.title}</p>
+
+                                <strong>DESCRIÇÃO</strong>
+                                <p> {incident.description}</p>
+                                
+                                <strong>VALOR:</strong>
+                                <p>R${incident.valueGol}</p>
+                                <FiTrash2 size={20}></FiTrash2>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </div>
         
     )
