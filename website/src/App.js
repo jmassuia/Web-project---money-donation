@@ -1,6 +1,7 @@
 import React from 'react';
 import Routes from './routes'
-import './Global.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 
 function App() {
   return (
