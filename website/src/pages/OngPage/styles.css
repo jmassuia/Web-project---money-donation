@@ -5,13 +5,13 @@
     outline: 0;
 }
 .formBackground{
-    position: absolute;
-    left: 28%;
-    top: 10%;
     display: flex;
     justify-content: center;
+    margin-top: 200px;
     position: absolute;
-    margin-top: 314px;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%,-50%);
     width: 900px;
     height: 1000px;
     background-color: white;
