@@ -1,9 +1,7 @@
 const {Router} = require('express');
 
 const multer = require('multer');
-const multerConfig = require('./config/multer');
-const donation = require('./config/mercadoPago');
-
+const multerConfig = require('');
 //Controllers
 const volunteerController = require('./controller/volunteerController');
 const ongsController = require('./controller/ongController');
@@ -12,6 +10,7 @@ const sessionController = require('./controller/sessionController');
 const imageController = require('./controller/imageController');
 
 //Checkout
+const checkoutController = require('./controller/checkoutController')
 
 const routes = Router();
 
@@ -19,7 +18,6 @@ const routes = Router();
 // Doadores
 routes.get('/users',volunteerController.index);
 routes.post('/users',volunteerController.store);
-
 // ONGs
 routes.get('/ongs',ongsController.index);
 routes.get('/session',sessionController.show);
@@ -31,11 +29,11 @@ routes.get('/upload',imageController.index);
 
 
 // Casos
-routes.get('/incident',incidentController.index);
-routes.post('/incident',incidentController.store);
-routes.delete('/incident/:id',incidentController.delete);
-// Donation
-routes.post('/donation',donation.checkout);
+routes.get('/incident',incidentController.index)
+routes.post('/incident',incidentController.store)
+routes.delete('/incident/:id',incidentController.delete)
+
+routes.get('/checkout', checkoutController.checkout)
 
 
 module.exports = routes;

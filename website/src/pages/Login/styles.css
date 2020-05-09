@@ -34,7 +34,7 @@
     width: 500px;
 }
 .block-login .inputs:focus{
-    border-color: #fff;
+    border-color: lightslategray;
     border-bottom: 3px solid orange;
     -webkit-box-shadow: none;
     outline: none;
