@@ -5,6 +5,9 @@
     outline: 0;
 }
 .formBackground{
+    position: absolute;
+    left: 28%;
+    top: 10%;
     display: flex;
     justify-content: center;
     position: absolute;

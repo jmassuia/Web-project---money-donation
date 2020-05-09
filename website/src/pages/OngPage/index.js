@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 import { FiUpload, FiPower } from 'react-icons/fi'
 import {Button,Form, Card} from 'react-bootstrap'
