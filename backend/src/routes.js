@@ -1,7 +1,8 @@
 const {Router} = require('express');
 
 const multer = require('multer');
-const multerConfig = require('');
+const multerConfig = require('./config/multer');
+const donationConfig = require('./config/mercadoPago');
 //Controllers
 const volunteerController = require('./controller/volunteerController');
 const ongsController = require('./controller/ongController');
@@ -38,7 +39,7 @@ routes.get('/incident',incidentController.index);
 routes.post('/incident',incidentController.store);
 routes.delete('/incident/:id',incidentController.delete);
 // Donation
-routes.post('/donation',donation.checkout);
+routes.post('/donation',donationConfig.checkout);
 
 
 module.exports = routes;
