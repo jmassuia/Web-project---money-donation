@@ -11,8 +11,11 @@ module.exports ={
          },
          //Changing the image name
         filename: (req, file, cb) => { 
-
-            const filename = 'teste'+ file.originalname;
+            const {ongName} = req.body;
+            if(!ongName){
+                const filename = "NotDefined";
+            }
+            const filename = 'teste' + file.originalname;
             cb(null,filename);
         },
     }),//This fileFilter is used to filter the file extension

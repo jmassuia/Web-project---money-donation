@@ -26,10 +26,9 @@ export default function Login(){
             password
         };
 
-        console.log(ongData);
-
         try{
             const response = await api.post('session',ongData);
+
             localStorage.setItem('ong_id',response.data.ong.id);
             localStorage.setItem('name',response.data.ong.name);
             localStorage.setItem('email',response.data.ong.email);
@@ -37,20 +36,31 @@ export default function Login(){
             localStorage.setItem('bankAgency',response.data.ong.bankAgency);
             localStorage.setItem('bankAccount',response.data.ong.bankAccount);
             history.push('/profile');
+
         }
         catch(err){
             alert('O email e/ou senha inserida não existem!!');
             console.log(err);
         }
-
+        URLImage();
     }
+    async function URLImage(){
+
+        const image = await api.get('upload',{
+            headers:{
+                authorization:2
+            }
+        })
+        localStorage.setItem("url",image.data.src.url);
+    }
+    
     return(
          <div className="container-login">
             <div className="header">
                 <img src={logo} alt="Brand"/>
                 <img src={Title} alt=""/>
             </div>
-            <Form className="form" onSubmit={handleLogin}>
+            <Form className="form">
                 <Form.Group className="block-login">
                     <Form.Label className="label">Email</Form.Label>
                     <Form.Control type="email" className="inputs" placeholder="Insira o e-mail da ONG"
@@ -67,7 +77,7 @@ export default function Login(){
                         required
                     />
                 </Form.Group>
-                <Button className="block-login button-login" variant="" type="submit">
+                <Button className="block-login button-login" variant="" onClick={handleLogin}>
                     Entrar
                 </Button>
             </Form>

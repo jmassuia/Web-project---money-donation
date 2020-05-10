@@ -11,9 +11,9 @@ module.exports={
     },
 
     async store(req, res){
-        const {title, description, valueGol} = req.body
+        const {title, description, valueGol} = req.body;
 
-        const ong_id = req.headers.authorization
+        const ong_id = req.headers.authorization;
 
         if(!ong_id){
             res.status(401).json({error: "Operation not authorazed!"});
@@ -30,8 +30,6 @@ module.exports={
     async delete(req,res){
         const { id } = req.params;
         const ong_id = req.headers.authorization;
-
-        //console.log(id,id_incident)
         
         const incident = await connection('incidents')
         .where('id',id)

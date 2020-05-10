@@ -13,7 +13,7 @@ import api from '../../services/api'
 import './styles.css'
 
 export default function OngPage(){
-    const ong_id = 1; //overwrite with localStorage.getItem('ong_id');
+    const ong_id = 2; //overwrite with localStorage.getItem('ong_id');
     const [picture, setPicture] = useState([]);
     const [url, setUrl] = useState([]);
     const [incidents, setIncidents] = useState([]);
@@ -76,6 +76,7 @@ export default function OngPage(){
     }
     function handleLogOff(){
         const ong_id = "" //overwrite to localStorage.clear("ong_id");
+        localStorage.clear();
         history.push('/');
     }
     function handleNewIncident(){

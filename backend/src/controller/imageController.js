@@ -4,11 +4,11 @@ module.exports={
     async index(req,res){
         const ong_id = req.headers.authorization;
 
-        const src = await connection('images')
+        const [src] = await connection('images')
         .where("ong_id",ong_id)
-        .select('*')
+        .select('url')
 
-        return res.json(src)
+        return res.json({src})
     },
     async store(req,res){
         const ong_id = req.headers.authorization;

@@ -35,8 +35,14 @@ export default function Incident(){
                 authorization:ong_id,
             }
         })
-            history.push('/profile');
-            console.log(request)
+            if(Error){
+                alert('Insira as informações necessarias');
+            }
+            else{
+                history.push('/profile');
+                console.log(request)
+            }
+
         }
         catch(err){
             console.log(err)
