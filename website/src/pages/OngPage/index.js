@@ -152,7 +152,7 @@ export default function OngPage(){
                             <div className='cardDiv' key={incident.id}>
                                 <Card  className="ongCard">
                                     <Card.Header>{incident.title}</Card.Header>
-                                    <Card.Body>
+                                    <Card.Body className="card-body">
                                         
                                         <Card.Text>
                                             <strong>Descrição:</strong>
