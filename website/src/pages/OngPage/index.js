@@ -109,23 +109,28 @@ export default function OngPage(){
         </div>
         
         <div className="casesBG">
-                <div className="cases">
+            <h3>Casos cadastrados</h3>
                     <ul>
                         {incidents.map(incident => (
                             <li key={incident.id}>
-                                <strong>CASO:</strong>
-                                <p> {incident.title}</p>
-
-                                <strong>DESCRIÇÃO</strong>
-                                <p> {incident.description}</p>
-                                
-                                <strong>VALOR:</strong>
-                                <p>R${incident.valueGol}</p>
-                                <FiTrash2 size={20}></FiTrash2>
+                                <Card  className="ongCard">
+                                    <Card.Header>{incident.title}</Card.Header>
+                                    <Card.Body>
+                                        
+                                        <Card.Text>
+                                            <strong>Descrição:</strong>
+                                            <p>{incident.description}</p>
+                                            <strong>Valor:</strong>
+                                            <p>R${incident.valueGol}</p>
+                                        </Card.Text>
+                                        
+                                    </Card.Body>
+                                    <FiTrash2 className='deleteBtn' size={20}></FiTrash2>
+                                </Card>
+                             
                             </li>
                         ))}
                     </ul>
-                </div>
             </div>
         </div>
         

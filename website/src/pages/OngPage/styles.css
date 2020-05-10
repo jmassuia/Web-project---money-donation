@@ -138,32 +138,15 @@ div .imageInput{
     position: absolute;
     left: 550px;
     top: 350px;
-    width: 290px;
-    height: 379px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 43px;
 }
-.Form .doediv{
-    position: absolute;
-    top: 327px;
-    background: #FFFFFF;
-    border-radius: 40px;
-    width: 80px;
-    height: 80px;
-    box-shadow: 0px 15px 10px -15px #111;  
-}
-.Form .ongImgDiv{
-    width: 242px;
-    height: 86px;
-    background: #EAEAEA;
-    border-radius: 17px;
-    display: flex;
-    justify-content: center;
-}
-.Form .ongImgDiv .cardImg{
-    width: 88px;
-    height: 86px;
+.card-body{
+    height: 300px;
+    width: 230px;
+    max-width: 230px;
+    max-height: 300px;
 }
 .Form .label{
     font-style: normal;
@@ -171,11 +154,13 @@ div .imageInput{
     font-size: 16px;
     line-height: 26px;
 }
-.Form .doeButton{
+.doeButton{
     position: absolute;
     top: 290px;
     width: 242px;
     height: 113.94px;
+    max-width: 242px;
+    max-height: 113.94px;
 }
 .Form .saveButton{
     width: 198px;
@@ -215,4 +200,16 @@ div .imageInput{
 }
 ul{
     margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+li{
+    margin-bottom: 20px;
+    height: auto;
+}
+.deleteBtn{
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
