@@ -9,9 +9,6 @@
     left: 50%; 
     top: 50%; 
     transform: translate(-50%,-50%);
-    display: flex;
-    justify-content: center;
-    position: absolute;
     width: 1500px;
     height: 600px;
     background-color: white;
@@ -19,6 +16,11 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px 10px 10px 10px;
     opacity: 0.97;
+}
+.formBackground div .edit{
+    display: flex;
+    justify-content: center;
+    
 }
 .flexInputs{
     margin-top: 30px;
@@ -68,24 +70,37 @@ div .inputimg{
 }
 div .imgPreview img{
     width: 160px;
-    height: 140px;
+    height: 150px;
     opacity: 0.9;
     border-radius: 50%;
 }
 div .imgLabel{
-    margin-top: 82px;
+    margin-top: 200px;
+    margin-left: 58px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
 }
-.formBackground .logOff{
-    background-color: #c4c4c4;
-    border-radius: 4PX;
+.formBackground .logOffIcon{
     height: 30px;
     width: 30px;
-    color: rgb(7, 132, 209);
+    margin-left: -7px;
+    color: rgb(255, 1, 1);
+    background-color: transparent;
+}
+.formBackground .logOffButton{
+    width: 40px;
+    height: 50px;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0 4px 8px 0  rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+}
+.formBackground .logOffButton:hover{
+    background-color: rgb(117, 117, 117);
+    border-color: transparent;
+
 }
 .fiIcon{
     width: 30px;
@@ -100,7 +115,7 @@ div .imageInput{
     justify-content: center;
     align-items: center;
     width: 160px;
-    height: 140px;
+    height: 150px;
     background: rgb(238, 238, 238);
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
@@ -110,7 +125,7 @@ div .imageInput{
     background-position-x: center;
     background-position-y: center;
     background-size: 150px 147px;
-    margin-right: 55px;
+    margin-right: 25px;
 }
 .Form .textInput{
     width: 398px;
@@ -178,9 +193,9 @@ div .imageInput{
     height: 113.94px;
 }
 .Form .saveButton{
-    width: 198px;
-    height: 52px;
-    margin-left: 200px;
+    width: 108px;
+    height: 40px;
+    margin-left: 220px;
     background: #61BAF1;
     border: 1px solid #61BAF1;
     box-sizing: border-box;
@@ -189,7 +204,7 @@ div .imageInput{
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 28px;
 
     color: #FFFFFF;
@@ -213,6 +228,12 @@ div .imageInput{
     padding: 10px 10px 10px 10px;
     opacity: 0.9;
 }
-ul{
-    margin-left: 15px;
-}
+.all .formBackground .utils{
+    margin-bottom: 50px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    background-color: #F3F3F3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 

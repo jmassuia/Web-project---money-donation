@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Registration from './pages/Registration'
 import OngPage from './pages/OngPage'
+import Incident from './pages/Incidents'
 
 export default function Routes(){
 
@@ -16,6 +17,7 @@ export default function Routes(){
                 <Route path="/login" component={Login}/>
                 <Route path="/newONG" component={Registration}/>
                 <Route path="/profile" component={OngPage}/>
+                <Route path="/incident" component={Incident}/>
             </Switch>
         </BrowserRouter>
     );

@@ -1,0 +1,32 @@
+
+.container-incidents{
+    margin-top: 100px;
+    position: relative;
+    left: 40%; 
+    right: 50%; 
+    width: 500px;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.container-incidents .header{
+    align-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container-incidents .header img{
+    margin-top: 20px;
+}
+.form .button-incidents{
+    width: 150px;
+    color: white;
+    background-color: rgba(255, 172, 0, 0.9);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 170px;
+    opacity: 0.8;
+}
+.form .button-incidents:hover{
+    opacity: 1;
+}
