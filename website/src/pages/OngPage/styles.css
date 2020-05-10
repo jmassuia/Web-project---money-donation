@@ -199,14 +199,13 @@ div .imageInput{
     opacity: 0.9;
 }
 ul{
-    margin-left: 15px;
+    margin-left: 0px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-li{
-    margin-bottom: 20px;
-    height: auto;
+.cardDiv{
+    margin-bottom: 10px;
 }
 .deleteBtn{
     align-self: flex-end;

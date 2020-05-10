@@ -112,7 +112,7 @@ export default function OngPage(){
             <h3>Casos cadastrados</h3>
                     <ul>
                         {incidents.map(incident => (
-                            <li key={incident.id}>
+                            <div className='cardDiv' key={incident.id}>
                                 <Card  className="ongCard">
                                     <Card.Header>{incident.title}</Card.Header>
                                     <Card.Body>
@@ -128,7 +128,7 @@ export default function OngPage(){
                                     <FiTrash2 className='deleteBtn' size={20}></FiTrash2>
                                 </Card>
                              
-                            </li>
+                            </div>
                         ))}
                     </ul>
             </div>
