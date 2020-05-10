@@ -24,7 +24,8 @@ routes.get('/ongs',ongsController.index);
 routes.get('/session',sessionController.show);
 routes.post('/ongs',ongsController.store);
 routes.post('/session',sessionController.session);
-//ONG
+routes.post('/ongdataupdate',ongsController.updateData);
+/*routes.post('/upload',imageController.store);*/
 routes.post('/upload',multer(multerConfig).single('file'),imageController.store);
 routes.get('/upload',imageController.index);
 

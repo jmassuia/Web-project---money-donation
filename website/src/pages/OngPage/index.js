@@ -36,6 +36,20 @@ export default function OngPage(){
         })
 
     }, [ong_id])
+    async function deleteIncidentHandler(id){
+        try{
+            const response = api.delete(`incident/${id}`,{
+                headers:{
+                    authorization: ong_id
+                }
+            }
+            
+            )
+            setIncidents(incidents.filter(incident => incident.id != id))
+        }catch(err){
+            alert('Erro ao deletar caso, tente novamente')
+        }
+    }
    
     function onChangeHandler(e){
        setPicture([...picture, e.target.files[0]]);
@@ -135,8 +149,8 @@ export default function OngPage(){
             <h3>Casos cadastrados</h3>
                     <ul>
                         {incidents.map(incident => (
-                            <div key={incident.id}>
-                                <Card  className="cardDiv">
+                            <div className='cardDiv' key={incident.id}>
+                                <Card  className="ongCard">
                                     <Card.Header>{incident.title}</Card.Header>
                                     <Card.Body>
                                         
@@ -148,7 +162,7 @@ export default function OngPage(){
                                         </Card.Text>
                                         
                                     </Card.Body>
-                                    <FiTrash2 className='deleteBtn' size={20}/>
+                                    <FiTrash2 onClick={()=>deleteIncidentHandler(incident.id)} className='deleteBtn' size={20}/>
                                 </Card>
                              
                             </div>
