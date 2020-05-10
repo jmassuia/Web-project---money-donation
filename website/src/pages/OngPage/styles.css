@@ -211,4 +211,8 @@ ul{
     align-self: flex-end;
     margin-right: 10px;
     margin-bottom: 10px;
+    
+}
+.deleteBtn::hover{
+    cursor: pointer;
 }
