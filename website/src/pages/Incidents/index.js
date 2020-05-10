@@ -12,9 +12,9 @@ import './styles.css';
 
 export default function Incident(){
 
-    const [title, setTitle] = useState('');
-    const [description, setDescription] = useState('');
-    const [valueGol, setValue] = useState(0);
+    const [title, setTitle] = useState();
+    const [description, setDescription] = useState();
+    const [valueGol, setValue] = useState();
 
     let history = useHistory();
 
@@ -72,7 +72,7 @@ export default function Incident(){
                     <Form.Control className="input" type="text" placeholder="Insira um valor (R$)"
                         value={valueGol}
                         onChange={e=>setValue(e.target.value)}
-                       required
+                        required
                      />
                 </Form.Group>
                   

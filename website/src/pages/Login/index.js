@@ -30,7 +30,12 @@ export default function Login(){
 
         try{
             const response = await api.post('session',ongData);
-            localStorage.setItem('ong_id',response.data.id.id);
+            localStorage.setItem('ong_id',response.data.ong.id);
+            localStorage.setItem('name',response.data.ong.name);
+            localStorage.setItem('email',response.data.ong.email);
+            localStorage.setItem('phone',response.data.ong.phone);
+            localStorage.setItem('bankAgency',response.data.ong.bankAgency);
+            localStorage.setItem('bankAccount',response.data.ong.bankAccount);
             history.push('/profile');
         }
         catch(err){

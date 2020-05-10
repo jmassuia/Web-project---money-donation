@@ -36,7 +36,6 @@ export default function OngPage(){
         })
 
     }, [ong_id])
-    console.log(ong_id)
    
     function onChangeHandler(e){
        setPicture([...picture, e.target.files[0]]);
@@ -65,6 +64,9 @@ export default function OngPage(){
         const ong_id = "" //overwrite to localStorage.clear("ong_id");
         history.push('/');
     }
+    function handleNewIncident(){
+        history.push('/incident')
+    }
     return(
         <div className="all">
             
@@ -73,8 +75,7 @@ export default function OngPage(){
                     <Button className="logOffButton buttonUtils"onClick={handleLogOff}>
                         <FiPower className="logOffIcon"/>
                     </Button>
-                    <Button className="saveButton buttonUtils" onClick={fileUploadHandler}>Salvar</Button>
-                    <Button className="saveButton buttonUtils">Cadastrar novo Caso</Button>
+                    <Button className="ongUtil buttonUtils" onClick={handleNewIncident}> Novo Caso</Button>
                 </header>
                 <div className="edit">
                     <div className="uploadImage">
@@ -96,34 +97,36 @@ export default function OngPage(){
                     <Form className="Form" method="post">
                         <div className="flexInputs">
                             <Form.Group className="bankInputs">
-                                <Form.Label className="label">Banco</Form.Label>
-                                <Form.Control type="text" className="input-bank" placeholder="Banco"/>
+                                <Form.Label className="label">Email</Form.Label>
+                                <Form.Control type="text" className="input-bank"
+                                    placeholder={localStorage.getItem('email')}
+                                />
                             </Form.Group>
                             <Form.Group className="bankInputs">
-                                <Form.Label className="label">Tipo de Conta</Form.Label>
-                                <Form.Control type="text" className="input-bank" placeholder="Tipo de Conta"/>
+                                <Form.Label className="label">Telefone</Form.Label>
+                                <Form.Control type="text" className="input-bank" placeholder={localStorage.getItem('phone')}/>
                             </Form.Group>
                             <Form.Group className="bankInputs">
                                 <Form.Label className="label">Agência</Form.Label>
-                                <Form.Control type="text" className="input-bank" placeholder="Agência"/>
+                                <Form.Control type="text" className="input-bank" placeholder={localStorage.getItem('bankAgency')}/>
                             </Form.Group>
                             <Form.Group className="bankInputs">
                                 <Form.Label className="label">Conta</Form.Label>
-                                <Form.Control type="text" className="input-bank" placeholder="Conta"/>
+                                <Form.Control type="text" className="input-bank" placeholder={localStorage.getItem('bankAccount')}/>
                             </Form.Group>
                         </div>    
                     <Form.Group>
                         <Form.Label className="label">Nome da Organização</Form.Label>
-                        <Form.Control type="text" className="input2" placeholder="Nome da Organização"></Form.Control>
+                        <Form.Control type="text" className="input2"
+                            placeholder={localStorage.getItem('name')}
+                        />
                     </Form.Group>
                     <Form.Group>
                         <Form.Label className="label">Link do vídeo</Form.Label>
                         <Form.Control type="text" className="input2" placeholder="Adicione o link de um vídeo da sua ONG"></Form.Control>
                     </Form.Group>
-                    <Form.Group>
-                        <Form.Label className="label">Texto</Form.Label>
-                        <Form.Control type="textarea" className="textInput" placeholder="Insira aqui a descrição da sua ONG"></Form.Control>
-                    </Form.Group>
+                    <Button className="buttonUtils ongUtil" onClick={fileUploadHandler}>Salvar</Button>
+
                 </Form>
                 
                 </div>
@@ -145,7 +148,7 @@ export default function OngPage(){
                                         </Card.Text>
                                         
                                     </Card.Body>
-                                    <FiTrash2 className='deleteBtn' size={20}></FiTrash2>
+                                    <FiTrash2 className='deleteBtn' size={20}/>
                                 </Card>
                              
                             </div>

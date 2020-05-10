@@ -11,16 +11,17 @@ module.exports={
         return res.json(src)
     },
     async store(req,res){
+        const ong_id = req.headers.authorization;
 
-        upload(req, res, function (err) {
-            if (err instanceof multer.MulterError) {
-                return res.status(500).json(err)
-            } else if (err) {
-                return res.status(500).json(err)
-            }
-                    return res.status(200).send(req.file)
-            });
-            console.log(req.file)
-            return res.json(data);
-        }    
-}   
+        const {originalname:fileName, size:source, path:url} = req.file;
+
+        const data =  await connection('images').insert({
+            ong_id,
+            fileName,
+            source,
+            url
+        });
+        console.log(data)
+        return res.json(data);
+    }   
+}
