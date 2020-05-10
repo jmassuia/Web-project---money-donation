@@ -28,5 +28,5 @@ module.exports={
         }
         
         return res.json({message:"Ong already exists"});
-    }
+    },
 }

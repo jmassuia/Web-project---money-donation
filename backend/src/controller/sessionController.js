@@ -4,16 +4,16 @@ module.exports = {
     async session(req,res){
         const {email,password} = req.body;
 
-        const [id] = await connection('ongs')
+        const [ong] = await connection('ongs')
         .where('email',email)
         .andWhere('password',password)
-        .select('id')
+        .select('id','name','email','phone','bankAgency','bankAccount')
 
-        if(!id){
+        if(!ong){
             return res.status(404).json({error:"ONG doesn't exists!!"})
          }
 
-        return res.json({id});
+        return res.json({ong});
     },
     async show(req,res){
         const ong_id = req.headers.authorization;

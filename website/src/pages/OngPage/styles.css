@@ -69,9 +69,9 @@ div .inputimg{
     height: 240px;
 }
 div .imgPreview img{
+    margin-right: 94px;
     width: 160px;
     height: 150px;
-    opacity: 0.9;
     border-radius: 50%;
 }
 div .imgLabel{
@@ -120,7 +120,6 @@ div .imageInput{
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
     border-radius:50%;
-    /*background-image: url("C:/Users/Pichau/Documents/GitHub/Web-project---money-donation/website/src/Assets/Logo-Greyscale1.png");*/
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
@@ -157,8 +156,14 @@ div .imageInput{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 43px;
 }
+.casesBG h3{
+    margin-top: 20px;
+    text-align: center;
+    border-bottom: 1.5px solid orange;
+    margin-bottom: 40px;
+}
 .casesBG .card-body{
-    height: 300px;
+    height: 150px;
     width: 230px;
     max-width: 230px;
     max-height: 300px;
@@ -214,7 +219,7 @@ div .imageInput{
     opacity: 0.9;
 }
 .all .formBackground .utils{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 100%;
     height: 50px;
     border-radius: 5px;
@@ -222,14 +227,20 @@ div .imageInput{
     background-color: #F3F3F3;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.formBackground .edit{
+    display: flex;
+    justify-content: center;
+}
 ul{
     margin-left: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 .casesBG .cardDiv{
     margin-bottom: 10px;
+    margin-left: 15px;
+
 }
 .casesBG .deleteBtn{
     align-self: flex-end;

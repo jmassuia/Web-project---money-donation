@@ -18,6 +18,13 @@ export default function OngPage(){
     const [url, setUrl] = useState([]);
     const [incidents, setIncidents] = useState([]);
 
+    const [name,setName] = useState('');
+    const [email,setEmail] = useState('');
+    const [phone,setPhone] = useState('');
+    const [bankAgency,setAgency] = useState('');
+    const [bankAccount,setAccount] = useState('');
+
+
     let history = useHistory();
 
     useEffect(()=>{
