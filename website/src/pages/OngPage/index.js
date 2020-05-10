@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import { FiUpload, FiPower, FiTrash2 } from 'react-icons/fi'
-import {Button,Form} from 'react-bootstrap'
+import {Button,Form,Card} from 'react-bootstrap'
 import {useHistory} from 'react-router-dom';
 
 import logo from '../../Assets/Caritas_Brand.png'
@@ -121,25 +121,29 @@ export default function OngPage(){
                 
                 </div>
             </div>
-            <div className="casesBG">
-                <div className="cases">
-                    <h3>Casos Cadastrados</h3>
+        <div className="casesBG">
+            <h3>Casos cadastrados</h3>
                     <ul>
                         {incidents.map(incident => (
-                            <li key={incident.id}>
-                                <strong>CASO:</strong>
-                                <p> {incident.title}</p>
-
-                                <strong>DESCRIÇÃO</strong>
-                                <p> {incident.description}</p>
-                                
-                                <strong>VALOR:</strong>
-                                <p>R${incident.valueGol}</p>
-                                <FiTrash2 size={20}></FiTrash2>
-                            </li>
+                            <div key={incident.id}>
+                                <Card  className="cardDiv">
+                                    <Card.Header>{incident.title}</Card.Header>
+                                    <Card.Body>
+                                        
+                                        <Card.Text>
+                                            <strong>Descrição:</strong>
+                                            <p>{incident.description}</p>
+                                            <strong>Valor:</strong>
+                                            <p>R${incident.valueGol}</p>
+                                        </Card.Text>
+                                        
+                                    </Card.Body>
+                                    <FiTrash2 className='deleteBtn' size={20}></FiTrash2>
+                                </Card>
+                             
+                            </div>
                         ))}
                     </ul>
-                </div>
             </div>
         </div>
         
