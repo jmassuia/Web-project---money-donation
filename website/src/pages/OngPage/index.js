@@ -147,7 +147,7 @@ export default function OngPage(){
             </div>
         <div className="casesBG">
             <h3>Casos cadastrados</h3>
-                    <ul>
+                    <ul className="incidents">
                         {incidents.map(incident => (
                             <div className='cardDiv' key={incident.id}>
                                 <Card  className="ongCard">

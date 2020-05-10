@@ -148,7 +148,7 @@ div .imageInput{
     width: 242px;
     height: 86px;
 }
-.casesBG .ongCard{
+/* .casesBG .ongCard{
     display: flex;
     align-items: center;
     position: absolute;
@@ -157,7 +157,7 @@ div .imageInput{
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 43px;
-}
+} */
 .casesBG h3{
     margin-top: 20px;
     text-align: center;
@@ -168,7 +168,9 @@ div .imageInput{
     height: 150px;
     width: 230px;
     max-width: 230px;
-    max-height: 300px;
+    max-height: 150;
+    min-width: 230px;
+    min-height: 150px;
 }
 .Form .label{
     font-style: normal;
@@ -226,23 +228,19 @@ div .imageInput{
     display: flex;
     justify-content: center;
 }
-ul{
+.incidents{
     margin-left: 0px;
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
 }
-.casesBG .cardDiv{
+.cardDiv{
     margin-bottom: 10px;
     margin-left: 15px;
-
+    max-width: 230px;
+    max-height: 150;
 }
-.casesBG .deleteBtn{
+.deleteBtn{
     align-self: flex-end;
     margin-right: 10px;
-    margin-bottom: 10px;
-    
-}
-.deleteBtn:hover{
-    cursor: pointer;
+    margin-bottom: 10px; 
 }
