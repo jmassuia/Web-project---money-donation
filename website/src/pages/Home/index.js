@@ -8,9 +8,7 @@ import './styles.css';
 export default function Home(){
     return (
         <div className="all">
-            <header>
-                <Container fluid>
-                    <Navbar className="navbar"collapseOnSelect variant="">
+                    <Navbar className="navbar" expand="xl" collapseOnSelect bg="light" variant="light">
                         <Navbar.Brand href="#home">
                             <img src="" width="150" height="50"/>
                         </Navbar.Brand>
@@ -24,10 +22,8 @@ export default function Home(){
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
-                </Container>
-            </header>
             <div className="carousel">
-                <Carousel fade="true" className="video-container">
+                <Carousel className="video-container">
                     <Carousel.Item>
                         <iframe width="1280" height="620" 
                             src="https://www.youtube.com/embed/WKN701td5mQ" 

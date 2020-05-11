@@ -1,19 +1,20 @@
 *{
     padding:0;
-    margin: auto;
     border:0;
     max-width: 1120px;
+    margin: 0;
 }
 html{
-    all: unset;
-    width: 100%;
     height: 0;
 }
 header .navbar{
-    min-width: 100%;
     width: 100%;
     margin-bottom: 50px;
     background-color: rgb(255, 255, 255);
+}
+nav.navbar.navbar-expand-xl.navbar-light.bg-light{
+    min-width: 100vw;
+    margin: 0;
 }
 .video-container{
     width: 1280px;
@@ -22,28 +23,17 @@ header .navbar{
 }
 div .all{
     height: auto;
-    width: 100%;
-    max-width: 1920px;
-    min-width: 1920px;
-}
-nav.navbar.navbar-expand{
-    width:100%;
-    min-width: 5000px;
-    margin-left: -15px;
-}
-#root{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: 100vw;
 }
 .carousel{ 
     all:unset;
     display: flex;
-    justify-content: center;
+    justify-content: center;;
     margin-bottom: 20px;
 }
 .cards{
     all:unset;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
 }
