@@ -15,6 +15,7 @@ header .navbar{
 nav.navbar.navbar-expand-xl.navbar-light.bg-light{
     min-width: 100vw;
     margin-right: 0;
+    margin-bottom: 50px;
 }
 .video-container{
     width: 1280px;
