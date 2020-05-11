@@ -1,0 +1,21 @@
+*{
+    padding:0;
+    margin: 0;
+    border:0;
+    max-width: 1120px;
+}
+header .navbar{
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: rgb(244,244,244);
+}
+header .container-navbar{
+    width: 100%;
+    background-color: tomato;
+}
+.video-container{
+    left: 15%;
+    width: 1000px;
+    height: 500px;
+    margin-bottom: 50px;
+}
