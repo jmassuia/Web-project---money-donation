@@ -1,31 +1,28 @@
 import React from 'react';
 
+import './styles.css';
 
 import {Card, Nav, Navbar,Carousel,CardDeck,Container} from 'react-bootstrap';
 //import logo from '../../Assets/Caritas_Brand.png';
-import './styles.css';
 
 export default function Home(){
     return (
-          
-        <div>
-            <header>
-                <Navbar className="navbar"collapseOnSelect expand="lg" variant="">
-                    <Navbar.Brand href="#home">
-                        <img src="" width="150" height="50"/>
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link className="navlink" href="#features">Home</Nav.Link>
-                        <Nav.Link className="navlink" href="#pricing">Serviços</Nav.Link>
-                        <Nav.Link className="navlink" href="">Orçamentos</Nav.Link>
-                        <Nav.Link className="navlink" href="">Contatos</Nav.Link>
-                    </Nav>
-                    </Navbar.Collapse>
-                </Navbar>
-            </header>
-            <Carousel className="video-container">
+    <div>
+        <Navbar className="navbar"collapseOnSelect expand="lg" variant="">
+            <Navbar.Brand href="#home">
+                <img src="" width="150" height="50"/>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+                <Nav.Link className="navlink" href="#features">Home</Nav.Link>
+                <Nav.Link className="navlink" href="#pricing">Serviços</Nav.Link>
+                <Nav.Link className="navlink" href="">Orçamentos</Nav.Link>
+                <Nav.Link className="navlink" href="">Contatos</Nav.Link>
+            </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+=           <Carousel className="video-container">
                 <Carousel.Item>
                     <iframe width="100%" height="620" 
                         src="https://www.youtube.com/embed/WKN701td5mQ" 
@@ -63,8 +60,8 @@ export default function Home(){
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-            <CardDeck>
-                <Card>
+            <CardDeck className="cardDeck">
+                <Card className="cards">
                     <Card.Img variant="top" src="holder.js/100px160" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
@@ -77,7 +74,7 @@ export default function Home(){
                         <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
                 </Card>
-                <Card>
+                <Card className="cards">
                     <Card.Img variant="top" src="holder.js/100px160" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
@@ -90,7 +87,7 @@ export default function Home(){
                         <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
                 </Card>
-                <Card>
+                <Card className="cards">
                     <Card.Img variant="top" src="holder.js/100px160" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
