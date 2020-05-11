@@ -7,11 +7,7 @@
 header .navbar{
     width: 100%;
     margin-bottom: 50px;
-    background-color: rgb(244,244,244);
-}
-header .container-navbar{
-    width: 100%;
-    background-color: tomato;
+    background-color: rgb(255, 255, 255);
 }
 .video-container{
     left: 15%;
