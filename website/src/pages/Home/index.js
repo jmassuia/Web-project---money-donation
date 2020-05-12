@@ -8,24 +8,22 @@ import {Card, Nav, Navbar,Carousel,CardDeck, Container} from 'react-bootstrap';
 export default function Home(){
     return (
         <div className="all">
-            <header>
-                <Navbar className="navbar"collapseOnSelect variant="">
-                    <Navbar.Brand href="#home">
-                        <img src="" width="150" height="50"/>
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="mr-auto">
-                            <Nav.Link className="navlink" href="#features">Home</Nav.Link>
-                            <Nav.Link className="navlink" href="#pricing">Serviços</Nav.Link>
-                            <Nav.Link className="navlink" href="">Orçamentos</Nav.Link>
-                            <Nav.Link className="navlink" href="">Contatos</Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Navbar>
-            </header>
+                    <Navbar className="navbar" expand="xl" collapseOnSelect bg="light" variant="light">
+                        <Navbar.Brand href="#home">
+                            <img src="" width="150" height="50"/>
+                        </Navbar.Brand>
+                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                        <Navbar.Collapse id="responsive-navbar-nav">
+                            <Nav className="mr-auto">
+                                <Nav.Link className="navlink" href="#features">Home</Nav.Link>
+                                <Nav.Link className="navlink" href="#pricing">Serviços</Nav.Link>
+                                <Nav.Link className="navlink" href="">Orçamentos</Nav.Link>
+                                <Nav.Link className="navlink" href="">Contatos</Nav.Link>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Navbar>
             <div className="carousel">
-                <Carousel fade="true" className="video-container">
+                <Carousel className="video-container">
                     <Carousel.Item>
                         <iframe width="1280" height="620" 
                             src="https://www.youtube.com/embed/WKN701td5mQ" 
