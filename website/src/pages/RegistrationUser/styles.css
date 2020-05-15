@@ -1,0 +1,40 @@
+
+.container-Registration{
+    position: absolute;
+    margin: 80px 200px 100px 270px;
+    width: 800px;
+    height: 650px;
+    align-content: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.container-Registration .header{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.form .block-registration{
+    color: #333;
+    font-size: 16px;
+    margin: 10px 85px 5px 85px;
+}
+.form .block-registration .input:hover{
+    border-bottom: 3px solid orange;
+}
+
+.form .button{
+    margin-left: 265px;
+    width: 250px;
+    height: 50px;
+    color: white;
+    background-color: rgba(255, 172, 0, 0.9);
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+.form .button:hover{
+    opacity: 1;
+}
+
+
