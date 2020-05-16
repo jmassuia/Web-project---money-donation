@@ -10,8 +10,8 @@ body{
     font:400 14px Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     /* Escolha o caminho de acordo com o seu diretorio, e comente o restante*/
+    background-image: url("C:/Users/jvmma/Documents/GitHub/Web-project---money-donation/website/src/Assets/bgImage.png");
     /*background-image: url("C:/Users/jvmma/Documents/GitHub/Web-project---money-donation/website/src/Assets/bgImage.png");
-    background-image: url("C:/Users/jvmma/Documents/GitHub/Web-project---money-donation/website/src/Assets/bgImage.png");*/
-    background-image: url("C:/Users/Pichau/Documents/GitHub/Web-project---money-donation/website/src/Assets/bgImage.png"); 
+    background-image: url("C:/Users/Pichau/Documents/GitHub/Web-project---money-donation/website/src/Assets/bgImage.png");*/
   
 }

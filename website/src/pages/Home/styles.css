@@ -7,26 +7,39 @@
 html{
     height: 0;
 }
-.containerteste{
-    width: 2000px;
-    margin-bottom: 50px;
-    background-color: violet;
-}
-header .navbar{
+.navbar{
     width: 100%;
-    margin-bottom: 50px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
+}
+div .all{
+    height: auto;
+    min-width: 100vw;
+}
+.navbar .brandImg img{
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+    margin-left: 35px;
 }
 nav.navbar.navbar-expand-xl.navbar-light.bg-light{
     min-width: 100vw;
     margin-right: 0;
-    margin-bottom: 50px;
 }
-.video-container{
-    margin-left: 100px;
-    width: 1000px;
-    height: 500px;
-    margin-bottom: 250px;
+
+.carousel{ 
+    all:unset;
+    display: flex;
+    justify-content: center;;
+    margin-bottom: 50px;
+    background-image: none;
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(235,235,235));
+}
+.carousel .carousel-item{
+    margin-top: 50px;
+}
+.carousel .video-container{
+    width: 1500px;
+    height: 650px;
 }
 .cardDeck{
     display: flex;
@@ -47,19 +60,30 @@ div.all .cardDeck .cards{
     height: 200px;
     margin-bottom: 50px;
 }
-div .all{
-    height: auto;
-    min-width: 100vw;
-}
-.carousel{ 
-    all:unset;
-    display: flex;
-    justify-content: center;;
-    margin-bottom: 20px;
-}
 .cards{
+    display: flex;
     all:unset;
     margin-top: 10px;
-    display: flex;
     justify-content: center;
+}
+.cards-container h3{
+    text-align: center;
+    min-width: 100vw;
+}
+.footer-container{
+    width: 100%;
+    height: 100px;
+    min-width: 100vw;
+    margin-top: 50px;
+    text-align: center;
+    background-color: #FAFAFA;
+}
+.footer-container .row .col{
+    margin-top: 50px;
+}
+.footer-container .row .col1{
+    margin-left: 500px;
+}
+.footer-container .row .col2{
+    text-align: right;
 }
