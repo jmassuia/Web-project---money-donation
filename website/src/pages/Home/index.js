@@ -2,15 +2,15 @@ import React from 'react';
 
 import './styles.css';
 
-import {Card, Nav, Navbar,Carousel,CardDeck, Container} from 'react-bootstrap';
-//import logo from '../../Assets/Caritas_Brand.png';
+import {Card, Nav, Navbar,Carousel,CardDeck} from 'react-bootstrap';
+import logo from '../../Assets/Caritas_Brand.png';
 
 export default function Home(){
     return (
         <div className="all">
                     <Navbar className="navbar" expand="xl" collapseOnSelect bg="light" variant="light">
                         <Navbar.Brand href="#home">
-                            <img src="" width="150" height="50"/>
+                            <img src={logo} width="150" height="50"/>
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
@@ -22,6 +22,7 @@ export default function Home(){
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
+                   
             <div className="carousel">
                 <Carousel className="video-container">
                     <Carousel.Item>
@@ -49,7 +50,9 @@ export default function Home(){
                         alt="Second slide" />
                     </Carousel.Item>
                 </Carousel>
+                   
             </div>
+         
                 <div className="divcard">
                     <CardDeck className="cardDeck">
                         <Card className="cards">

@@ -6,6 +6,28 @@
 html{
     height: 0;
 }
+.carousel .video-container .carousel-control-prev {
+
+    height: 620px;
+    margin-top: 122px;
+ 
+ }
+
+
+.carousel .video-container .carousel-control-next {
+
+    height: 620px;
+    margin-top: 122px;
+ 
+ }
+
+
+.carousel .video-container .carousel-control-next-icon {
+
+   height: 620px;
+   margin-top: 50px;
+
+}
 .containerteste{
     width: 2000px;
     margin-bottom: 50px;
@@ -26,6 +48,7 @@ nav.navbar.navbar-expand-xl.navbar-light.bg-light{
     height: 500px;
     margin-bottom: 250px;
 }
+
 .cardDeck{
     display: flex;
     background-color: white;
