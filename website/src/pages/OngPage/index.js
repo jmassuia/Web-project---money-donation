@@ -14,7 +14,7 @@ import api from '../../services/api'
 import './styles.css'
 
 export default function OngPage(){
-    const ong_id = 2; //overwrite with localStorage.getItem('ong_id');
+    const ong_id = 1; //overwrite with localStorage.getItem('ong_id');
     const [picture, setPicture] = useState([]);
     const [url, setUrl] = useState([]);
     const [incidents, setIncidents] = useState([]);
@@ -29,11 +29,11 @@ export default function OngPage(){
     let history = useHistory();
 
     useEffect(()=>{
-        api.get('incident',{headers: {
+        api.get('session',{headers: {
             authorization: ong_id
         }
         }).then(response=>{
-            setIncidents(response.data)
+            setIncidents(response.data.incident)
         })
 
     }, [ong_id])
@@ -142,7 +142,6 @@ export default function OngPage(){
                         <Form.Control type="text" className="input2" placeholder="Adicione o link de um vídeo da sua ONG"></Form.Control>
                     </Form.Group>
                     <Button className="buttonUtils ongUtil" onClick={fileUploadHandler}>Salvar</Button>
-
                 </Form>
                 
                 </div>

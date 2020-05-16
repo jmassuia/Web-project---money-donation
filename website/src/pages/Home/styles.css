@@ -2,73 +2,123 @@
     padding:0;
     border:0;
     max-width: 1120px;
-    margin: 0;
 }
 html{
     height: 0;
 }
-.navbar{
-    width: 100%;
-    background-color: white;
-}
 div .all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: auto;
     min-width: 100vw;
 }
+.navbar{
+    width: 100%;
+    min-width: 100vw;
+    margin-right: 0;
+    background-color: rgb(255, 255, 255);
+}
+
 .navbar .brandImg img{
     width: 50px;
     height: 50px;
     margin-right: 50px;
     margin-left: 35px;
 }
-nav.navbar.navbar-expand-xl.navbar-light.bg-light{
-    min-width: 100vw;
-    margin-right: 0;
+.navbar .brandImg img:hover{
+    width: 60px;
+    height: 60px;
 }
+.navbar .mr-auto .navlink{
+    display: flex;
+    margin-left: 5px;
+    color: rgb(150,150,150);
+    font-size: 15px
+}
+.navbar .mr-auto .navlink:hover{
+    color: orange;
+    font-size: 16px;
+    font-weight: 500;
+}
+.carousel .video-container .carousel-control-prev {
+    height: 620px;
+    margin-top: 122px;
+ }
+.carousel .video-container .carousel-control-next {
+    height: 620px;
+    margin-top: 122px;
+ }
 
-.carousel{ 
+
+.carousel .video-container .carousel-control-next-icon {
+
+   height: 620px;
+   margin-top: 50px;
+
+}
+.all .carousel{ 
     all:unset;
     display: flex;
-    justify-content: center;;
+    justify-content: center;
     margin-bottom: 50px;
-    background-image: none;
     background-image: linear-gradient(rgb(255, 255, 255),rgb(235,235,235));
 }
 .carousel .carousel-item{
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .carousel .video-container{
     width: 1500px;
     height: 650px;
 }
+.all h3{
+    border-bottom: 2px solid orange;
+    color: #333;
+}
 .cardDeck{
     display: flex;
+    margin: 10px auto;
+    justify-content: center;
     background-color: white;
     justify-content: center;
     width: 1120px;
     text-align: center;
     margin-top: 20px;
-    margin-left: 100px;
     margin-bottom: 40px;
     box-shadow: 5px 10px 18px #888888;
     border-radius: 10px;
 }
-div.all .cardDeck .cards{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 120px;
-    height: 200px;
-    margin-bottom: 50px;
+.cards a img{
+    margin-top: 127px;
 }
-.cards{
-    display: flex;
+
+.carousel{ 
     all:unset;
-    margin-top: 10px;
-    justify-content: center;
+    margin-bottom: 20px;
 }
-.cards-container h3{
-    text-align: center;
-    min-width: 100vw;
+.divcard{
+    height: auto;
+    width: auto;
+    background: none;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.all .divcard .cardDeck .cards{
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    width: 150px;
+    height: auto 350px;
+    word-wrap: break-word;
+    background-color: #FAFAFA;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 5px 10px 18px #9999;
+    border-radius: 45px;
+}
+.listCards{
+    flex-wrap: wrap;
 }
 .footer-container{
     width: 100%;
