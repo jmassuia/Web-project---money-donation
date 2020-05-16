@@ -2,7 +2,6 @@
     padding:0;
     border:0;
     max-width: 1120px;
-    margin: 0;
 }
 html{
     height: 0;
@@ -14,7 +13,6 @@ html{
 }
 header .navbar{
     width: 100%;
-    margin-bottom: 50px;
     background-color: rgb(255, 255, 255);
 }
 nav.navbar.navbar-expand-xl.navbar-light.bg-light{
@@ -40,7 +38,7 @@ nav.navbar.navbar-expand-xl.navbar-light.bg-light{
     box-shadow: 5px 10px 18px #888888;
     border-radius: 10px;
 }
-div.all .cardDeck .cards{
+div .all .cardDeck .cards{
     margin-top: 40px;
     margin-bottom: 40px;
     width: 120px;
@@ -48,18 +46,37 @@ div.all .cardDeck .cards{
     margin-bottom: 50px;
 }
 div .all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: auto;
     min-width: 100vw;
 }
 .carousel{ 
     all:unset;
-    display: flex;
-    justify-content: center;;
     margin-bottom: 20px;
 }
+.divcard{
+    height: auto;
+    width: auto;
+    background: none;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+}
 .cards{
-    all:unset;
-    margin-top: 10px;
+    box-sizing: border-box;
+    width: 180px;
+    height: 250px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.cardDeck{
+    margin: 10px auto;
     display: flex;
     justify-content: center;
 }
