@@ -11,6 +11,7 @@ import './styles.css';
 
 
 export default function Login(){
+    let ongid = ""
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
     
@@ -28,7 +29,7 @@ export default function Login(){
 
         try{
             const response = await api.post('session',ongData);
-
+            ongid = response.data.ong.id
             localStorage.setItem('ong_id',response.data.ong.id);
             localStorage.setItem('name',response.data.ong.name);
             localStorage.setItem('email',response.data.ong.email);
@@ -36,23 +37,31 @@ export default function Login(){
             localStorage.setItem('bankAgency',response.data.ong.bankAgency);
             localStorage.setItem('bankAccount',response.data.ong.bankAccount);
             history.push('/profile');
-
         }
         catch(err){
             alert('O email e/ou senha inserida não existem!!');
-            console.log(err);
+            console.log("Houve um erro: " + err);
         }
         URLImage();
     }
     async function URLImage(){
-
+        
         const image = await api.get('upload',{
             headers:{
-                authorization:2
+                authorization:ongid
             }
         })
-        localStorage.setItem("url",image.data.src.url);
+        try{
+        if(image.data.src.url.length){
+            localStorage.setItem("url",image.data.src.url);
+            console.log(image)
+    }}
+    catch(err){
+        localStorage.setItem("url", logo)
+        console.log(`Usuário sem imagem.`)
     }
+    }
+    
     
     return(
          <div className="container-login">

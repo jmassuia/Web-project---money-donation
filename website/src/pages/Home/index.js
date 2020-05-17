@@ -75,9 +75,9 @@ export default function Home(){
                     <CardDeck className="cardDeck">
                         {incidents.map(incident => (
                             <Card className="cards" key={incident.id}>
-                                <Card.Img variant="top" src="holder.js/100px160" />
+                                <Card.Img className='carddimg' variant="top" src={logo} />
                                 <Card.Body>
-                                    <Card.Title>{incident.title}</Card.Title>
+                                    <Card.Title><span className='ongtitl'>{incident.name}</span><br/>{incident.title}</Card.Title>
                                     <Card.Text>
                                             <strong>Descrição:</strong>
                                             <p value={incident.description}>{incident.description}</p>

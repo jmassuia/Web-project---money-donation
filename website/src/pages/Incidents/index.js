@@ -12,6 +12,8 @@ import './styles.css';
 
 export default function Incident(){
 
+
+
     const [title, setTitle] = useState();
     const [description, setDescription] = useState();
     const [valueGol, setValue] = useState();
@@ -20,7 +22,11 @@ export default function Incident(){
 
     async function handleSubmit(e){
         e.preventDefault();
-        
+
+        let tit = document.getElementById("title")
+        let val = document.getElementById("value")
+        let descrip = document.getElementById("descrip")
+
         const ong_id =1;
 
         const data={
@@ -28,26 +34,21 @@ export default function Incident(){
             description,
             valueGol
         }
-
-        try{
-            const request = api.post('incident',data,{
-             headers:{
-                authorization:ong_id,
-            }
-        })
-            if(Error){
-                alert('Insira as informações necessarias');
-            }
-            else{
+            if(tit.value.length > 0 && val.value.length > 0 && descrip.value.length > 0){
+                const request = api.post('incident',data,{
+                    headers:{
+                       authorization:ong_id,
+                   }
+               })
                 history.push('/profile');
                 console.log(request)
+            }else{
+                alert("Houve um erro ao cadastrar o caso, Confira os dados.")
             }
 
-        }
-        catch(err){
-            console.log(err)
-        }
-
+    }
+    async function handleGoBack(){
+        history.push("/profile")
     }
     
     return(
@@ -62,6 +63,7 @@ export default function Incident(){
                             <Form.Control className="input" type="text" placeholder="Insira o titulo do caso"
                                 value={title}
                                 onChange={e => setTitle(e.target.value)}
+                                id="title"
                                 required    
                             />
                 </Form.Group>
@@ -70,6 +72,7 @@ export default function Incident(){
                             <Form.Control className="input" type="text" placeholder="Insira a descrição do caso"
                                 value={description}
                                 onChange={e => setDescription(e.target.value)}
+                                id="descrip"
                                 required
                             />
                 </Form.Group>
@@ -78,13 +81,18 @@ export default function Incident(){
                     <Form.Control className="input" type="text" placeholder="Insira um valor (R$)"
                         value={valueGol}
                         onChange={e=>setValue(e.target.value)}
+                        id="value"
                         required
                      />
                 </Form.Group>
-                  
-                <Button className="button-incidents" variant="" type="submit" onClick={handleSubmit}>
-                    Cadastrar
-                </Button>
+                <div className="buttonss">
+                    <Button className="button-incidents1" variant="" type="submit" onClick={handleSubmit}>
+                        Cadastrar
+                    </Button>
+                    <Button className="button-incidents" variant="" type="submit" onClick={handleGoBack}>
+                        Voltar
+                    </Button>
+                </div>
             </Form>
         </div>
     )
