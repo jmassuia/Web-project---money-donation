@@ -71,7 +71,6 @@ export default function Home(){
             </div>
                 <h3>Conheça algumas de nossas ONG's</h3>
                 <div className="divcard">
-                    <ul className="listCards">
                     <CardDeck className="cardDeck">
                         {incidents.map(incident => (
                             <Card className="cards" key={incident.id}>
@@ -91,7 +90,6 @@ export default function Home(){
                             </Card>
                     ))}
                     </CardDeck>
-                    </ul>
 
                 </div>
                 <Container className="footer-container">
