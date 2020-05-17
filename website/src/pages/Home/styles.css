@@ -92,7 +92,9 @@ div .all{
 .cards a img{
     margin-top: 127px;
 }
-
+.cards button{
+    border-radius: 47px;
+}
 .carousel{ 
     all:unset;
     margin-bottom: 20px;

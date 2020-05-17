@@ -16,34 +16,34 @@ module.exports = {
             //pra desenvolvimento, a gente usa a lib dotenv-safe q ela usa o arquivo .env na raiz como fonte
             access_token: process.env.MERCADO_PAGO_ACCESS_TOKEN
         });
-
         //cuidado na hora de mandar esse amount, manda sempre preço bem baixo
         //centavos ou 1R$
         //para passar na url usa:
         //http://localhost:6767/checkout?price=0.01&description=%22boneca%20infl%C3%A1vel%20de%20an%C3%A3o%20careca%22&quantity=2
-        const { title, description, price, quantity } = req.body;
+        const {title, description, valueGol} = req.body;
 
+        console.log(title +" " + description +" " + valueGol);
+        
         //Create purchase item object template
         const purchaseOrder = {
-            items: [
-              {
+           items: [
+             {
                 title: title,
                 description : description,
-                quantity: parseInt(quantity),
+                quantity: parseInt(1),
                 currency_id: 'BRL',
-                unit_price: parseFloat(price)
+                unit_price: parseFloat(valueGol)
               }
             ]
-          }
-  
+          }          
           //ah perai, nunca deixa essas coisa de configuracao do mercado pago hardcoded, deixa em variavel de ambiente, 
-/*        // This code below is part of the frontend
+          // This code below is part of the frontend
           try {
             //Depois de configurado, aqui vc cria o pedido
             const preference = await MercadoPago.preferences.create(purchaseOrder);
-            return res.redirect(`${preference.body.init_point}`);
+            return res.json({url:`${preference.body.init_point}`});
           }catch(err){
-            return res.send(err.message);
-          }*/
+            return res.json(err.message);
+          }
     }
 }

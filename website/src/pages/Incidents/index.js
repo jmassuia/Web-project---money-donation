@@ -12,9 +12,9 @@ import './styles.css';
 
 export default function Incident(){
 
-    const [title, setTitle] = useState();
-    const [description, setDescription] = useState();
-    const [valueGol, setValue] = useState();
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [valueGol, setValue] = useState(0);
 
     let history = useHistory();
 

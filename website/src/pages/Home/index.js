@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 
 import './styles.css';
 
-import {Card, Nav, Navbar,Carousel,CardDeck,Container,Row,Col} from 'react-bootstrap';
+import {Card, Nav, Navbar,Carousel,CardDeck,Container,Row,Col,Popover,OverlayTrigger} from 'react-bootstrap';
 import logo from '../../Assets/Caritas_Brand.png';
 import api from '../../services/api';
 
@@ -14,6 +14,7 @@ import donateButton from '../../Assets/Botão.png'
 
 export default function Home(){
     const [incidents, setIncidents] = useState([]);
+    const [paymentURL,setPaymentURL] = useState([]);
 
     useEffect(()=>{
         api.get('incident')
@@ -23,9 +24,29 @@ export default function Home(){
 
     }, [])
 
-    async function handleDonate(){
+    async function handleDonate(title,description,valueGol){
+        const data={
+            title,
+            description,
+            valueGol
+        }
 
+        try{
+            const response = await api.post('donation',data);
+            setPaymentURL(response.data.url);
+        }
+        catch(err){
+            console.log(err);
+        }
     }
+    const popover =(
+        <Popover id="popover-basic">
+                <Popover.Title as="h3">Link para doação:</Popover.Title>
+                <Popover.Content>
+                    Clique no <a href={paymentURL}>link</a> para finalizar a doação!
+                </Popover.Content>
+        </Popover>
+    );
     return (
         <div className="all" id="home">
                     <Navbar className="navbar fixed-top" expand="xl" collapseOnSelect variant="light">
@@ -75,19 +96,22 @@ export default function Home(){
                     <CardDeck className="cardDeck">
                         {incidents.map(incident => (
                             <Card className="cards" key={incident.id}>
-                                <Card.Img variant="top" src="holder.js/100px160" />
+                                <Card.Img variant="top" src={logo} />
                                 <Card.Body>
                                     <Card.Title>{incident.title}</Card.Title>
                                     <Card.Text>
                                             <strong>Descrição:</strong>
-                                            <p value={incident.description}>{incident.description}</p>
+                                            <p>{incident.description}</p>
                                             <strong>Valor:</strong>
                                             <p>R${incident.valueGol}</p>
                                     </Card.Text>
                                 </Card.Body>
-                                <a href=""onClick={handleDonate}>
-                                    <img src={donateButton} alt=""/>
-                                </a>
+                                <OverlayTrigger trigger="click" overlay={popover}>
+                                    <button type="submit" onClick={()=>handleDonate(incident.title,incident.description,incident.valueGol)}>
+                                        <img src={donateButton} alt=""/>
+                                    </button>
+                                </OverlayTrigger>
+
                             </Card>
                     ))}
                     </CardDeck>
