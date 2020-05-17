@@ -31,13 +31,12 @@ module.exports={
     },
     async updateData(req, res){
         const ong_id = req.headers.authorization
-        const {name, CNPJ, email, phone, bankAgency, bankAccount} = req.body
+        const {name, email, phone, bankAgency, bankAccount} = req.body
 
         const update = await connection('ongs')
         .where('id', '=', ong_id)
         .update({
             name: name,
-            CNPJ: CNPJ,
             email: email,
             phone: phone,
             bankAgency: bankAgency,

@@ -67,7 +67,7 @@ export default function Home(){
                 <Carousel className="video-container">
                     <Carousel.Item className="carousel-item">
                         <iframe width="1280" height="620" 
-                            src="https://www.youtube.com/embed/WKN701td5mQ" 
+                            src="https://www.youtube.com/embed/u8jLYZexddc" 
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen   
@@ -83,7 +83,7 @@ export default function Home(){
                     </Carousel.Item>
                     <Carousel.Item className="carousel-item">
                         <iframe width="1280" height="620" 
-                        src="https://www.youtube.com/embed/WKN701td5mQ" 
+                        src="https://www.youtube.com/embed/8d-bbBlg7Ao" 
                         frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen

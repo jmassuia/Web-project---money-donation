@@ -110,6 +110,7 @@ div .all{
     background: none;
     border: none;
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 div.all .divcard .cardDeck .cards{
