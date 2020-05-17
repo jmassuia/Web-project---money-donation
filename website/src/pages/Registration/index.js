@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 
+import {useHistory} from 'react-router-dom';
+
 import {Button,Form,Col} from 'react-bootstrap';
 import logo from '../../Assets/Caritas_Brand.png'
 import Title from '../../Assets/Escrita 1.png'
@@ -17,20 +19,25 @@ export default function Registration(){
     const [bankAccount, setBankAccount] = useState('');
     const [password, setPassword] = useState('');
 
-    const data = {
-        name,
-        CNPJ,
-        email,
-        phone,
-        bankAgency,
-        bankAccount,
-        password
-    }
+    var history = useHistory();
 
     async function handleResgiter(e){
         e.preventDefault();
+
+        const data = {
+            name,
+            CNPJ,
+            email,
+            phone,
+            bankAgency,
+            bankAccount,
+            password
+        }
+
+
         try{
             const response = api.post('ongs',data);
+            history.push('/login');
         }
         catch(err){
             alert('Ong já cadastrada!!');

@@ -24,8 +24,9 @@ export default function Home(){
 
     }, [])
 
-    async function handleDonate(title,description,valueGol){
+    async function handleDonate(name,title,description,valueGol){
         const data={
+            name,
             title,
             description,
             valueGol
@@ -56,9 +57,9 @@ export default function Home(){
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">
-                                <Nav.Link className="navlink" href="/login">Home</Nav.Link>
+                                <Nav.Link className="navlink" href="#home">Home</Nav.Link>
                                 <Nav.Link className="navlink" href="/login">ONG's</Nav.Link>
-                                <Nav.Link className="navlink" href="">Seja um parceiro</Nav.Link>
+                                <Nav.Link className="navlink" href="/newONG">Seja um parceiro</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>    
@@ -96,8 +97,9 @@ export default function Home(){
                     <CardDeck className="cardDeck">
                         {incidents.map(incident => (
                             <Card className="cards" key={incident.id}>
-                                <Card.Img variant="top" src={logo} />
+                                <Card.Img className='carddimg' variant="top" src={logo} />
                                 <Card.Body>
+                                    <span className='ongtitl'>{incident.name}</span>
                                     <Card.Title>{incident.title}</Card.Title>
                                     <Card.Text>
                                             <strong>Descrição:</strong>
@@ -107,7 +109,7 @@ export default function Home(){
                                     </Card.Text>
                                 </Card.Body>
                                 <OverlayTrigger trigger="click" overlay={popover}>
-                                    <button type="submit" onClick={()=>handleDonate(incident.title,incident.description,incident.valueGol)}>
+                                    <button type="submit" onClick={()=>handleDonate(incident.name,incident.title,incident.description,incident.valueGol)}>
                                         <img src={donateButton} alt=""/>
                                     </button>
                                 </OverlayTrigger>

@@ -69,13 +69,6 @@ div .inputimg{
     width: 160px;
     height: 150px;
     border-radius:50%;
-
-}
-div .imgPreview img{
-    margin-right: 94px;
-    width: 160px;
-    height: 150px;
-    border-radius: 50%;
 }
 div .imgLabel{
     margin-top: 200px;
@@ -249,4 +242,11 @@ div .imageInput{
 .deleteBtn:hover{
     color: red;
     cursor: pointer;
+}
+
+div .imgPreview img{
+    margin-right: 94px;
+    width: 160px;
+    height: 150px;
+    border-radius: 50%;
 }

@@ -20,7 +20,7 @@ module.exports = {
         //centavos ou 1R$
         //para passar na url usa:
         //http://localhost:6767/checkout?price=0.01&description=%22boneca%20infl%C3%A1vel%20de%20an%C3%A3o%20careca%22&quantity=2
-        const {title, description, valueGol} = req.body;
+        const {name, title, description, valueGol} = req.body;
 
         console.log(title +" " + description +" " + valueGol);
         
@@ -28,7 +28,7 @@ module.exports = {
         const purchaseOrder = {
            items: [
              {
-                title: title,
+                title: title + " - " + name,
                 description : description,
                 quantity: parseInt(1),
                 currency_id: 'BRL',

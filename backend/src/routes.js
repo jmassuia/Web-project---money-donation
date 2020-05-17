@@ -27,6 +27,7 @@ routes.post('/session',sessionController.session);
 routes.post('/ongdataupdate',ongsController.updateData);
 /*routes.post('/upload',imageController.store);*/
 routes.post('/upload',multer(multerConfig).single('file'),imageController.store);
+routes.post('/updateImage',multer(multerConfig).single('file'),imageController.check);
 routes.get('/upload',imageController.index);
 
 

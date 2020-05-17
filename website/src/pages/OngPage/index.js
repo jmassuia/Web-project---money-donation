@@ -14,8 +14,22 @@ import api from '../../services/api'
 import './styles.css'
 
 export default function OngPage(){
-    const ong_id = 1; //overwrite with localStorage.getItem('ong_id');
-    const [picture, setPicture] = useState([]);
+
+    /*const imgprev = document.getElementById('imgPrev')
+    imgprev.setAttribute('src', '')*/
+    const reader = new FileReader()
+    let onglogo = localStorage.getItem('url')
+    try{
+    onglogo = onglogo.replace(/\\/g, "/")
+
+    console.log("onglogo")
+    
+}catch(err){
+    console.log(`Houve um erro: ${err}`)
+}
+console.log(onglogo)
+    const ong_id = localStorage.getItem('ong_id'); //overwrite with localStorage.getItem('ong_id');
+    const [picture, setPicture] = useState([])
     const [url, setUrl] = useState([]);
     const [incidents, setIncidents] = useState([]);
 
@@ -25,6 +39,7 @@ export default function OngPage(){
     const [bankAgency,setAgency] = useState('');
     const [bankAccount,setAccount] = useState('');
 
+    
 
     let history = useHistory();
 
@@ -53,8 +68,8 @@ export default function OngPage(){
     }
    
     function onChangeHandler(e){
-       setPicture([...picture, e.target.files[0]]);
-       setUrl([...url,URL.createObjectURL(e.target.files[0])]);
+        setPicture([...picture, e.target.files[0]]);
+        setUrl([...url,URL.createObjectURL(e.target.files[0])]);
    }
    async function fileUploadHandler(e){
        e.preventDefault();
@@ -63,7 +78,7 @@ export default function OngPage(){
         const data = new FormData()
         data.append('file',picture[0])
         try{
-            const result = await api.post('upload',data,{
+            const result = await api.post('updateImage',data,{
                 headers:{
                     authorization:ong_id,
                 }

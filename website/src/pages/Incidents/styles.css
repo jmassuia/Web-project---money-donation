@@ -2,9 +2,10 @@
 .container-incidents{
     background-color: white;
     margin-top: 100px;
-    position: relative;
-    left: 40%; 
-    right: 50%; 
+    position: absolute;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%,-60%); 
     width: 500px;
     height: 450px;
     border-radius: 8px;
@@ -25,9 +26,21 @@
     background-color: rgba(255, 172, 0, 0.9);
     margin-top: 20px;
     margin-bottom: 10px;
-    margin-left: 170px;
+    opacity: 0.8;
+}
+.form .button-incidents1{
+    width: 150px;
+    color: white;
+    background-color: rgba(255, 172, 0, 0.9);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 30px;
     opacity: 0.8;
 }
 .form .button-incidents:hover{
     opacity: 1;
+}
+.form .buttonss{
+    display: flex;
+    justify-content: center;
 }

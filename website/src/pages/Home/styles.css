@@ -3,9 +3,6 @@
     border:0;
     max-width: 1120px;
 }
-html{
-    height: 0;
-}
 div .all{
     display: flex;
     flex-direction: column;
@@ -53,10 +50,8 @@ div .all{
 
 
 .carousel .video-container .carousel-control-next-icon {
-
    height: 620px;
    margin-top: 50px;
-
 }
 .all .carousel{ 
     all:unset;
@@ -89,8 +84,18 @@ div .all{
     box-shadow: 5px 10px 18px #888888;
     border-radius: 10px;
 }
-.cards a img{
-    margin-top: 127px;
+.cards .carddimg{
+    margin-top: 20px;
+}
+.cards .ongtitl{
+    color: #777;
+    font-size: 14px;
+}
+.carddimg{
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    align-self: center;
 }
 .cards button{
     border-radius: 47px;
