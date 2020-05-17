@@ -83,6 +83,7 @@ export default function OngPage(){
     function handleNewIncident(){
         history.push('/incident')
     }
+
     return(
         <div className="all">
             
@@ -94,22 +95,6 @@ export default function OngPage(){
                     <Button className="ongUtil buttonUtils" onClick={handleNewIncident}> Novo Caso</Button>
                 </header>
                 <div className="edit">
-                    <div className="uploadImage">
-                        <Form.Group className="imageInput">
-                            <Form.Label className="imgLabel">Perfil</Form.Label>
-                            <FiUpload className="fiIcon"/>
-                            <Form.Control 
-                            name="inputimg"
-                            type="file" 
-                            className="inputimg"
-                            onChange={onChangeHandler}>
-                            </Form.Control>
-                            <div className="imgPreview">
-                                <img src={url} alt=""/>
-                            </div>
-
-                        </Form.Group>
-                    </div>
                     <Form className="Form" method="post">
                         <div className="flexInputs">
                             <Form.Group className="bankInputs">

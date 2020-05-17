@@ -6,7 +6,7 @@ module.exports={
 
         const [src] = await connection('images')
         .where("ong_id",ong_id)
-        .select('url')
+        .select()
 
         return res.json({src})
     },
