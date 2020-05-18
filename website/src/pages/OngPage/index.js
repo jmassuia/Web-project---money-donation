@@ -38,13 +38,10 @@ export default function OngPage() {
     const [phone, setPhone] = useState('');
     const [bankAgency, setAgency] = useState('');
     const [bankAccount, setAccount] = useState('');
-
-    
-
-
+    const [counter,setCounter] = useState(0);
+    const [ObjectArray,setObjectArray] = useState(['']);
 
     let history = useHistory();
-
     useEffect(() => {
         api.get('session', {
             headers: {
