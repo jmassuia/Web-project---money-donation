@@ -3,8 +3,12 @@ import Routes from './routes'
 import './Global.css';
 
 function App() {
+  //Componentes que devem estar presentes em toda as paginas deveram ser colocados aqui
   return (
-    <Routes/>
+    <div>
+      <Routes/>
+    </div>
+
   );
 }
 

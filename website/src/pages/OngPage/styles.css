@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+    max-width: 1120px;
+    outline: 0;
+}
+.formBackground{
+    position: absolute;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%,-60%);
+    width: 1500px;
+    height: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 10px 10px 10px;
+    opacity: 0.97;
+}
+.formBackground div .edit{
+    display: flex;
+    justify-content: center;
+    
+}
+.flexInputs{
+    margin-top: 30px;
+    display: flex;
+    flex-grow: 1;
+    flex: 1;
+}
+.flexInputs .bankInputs{
+    display: block;
+}
+.flexInputs .bankInputs .label{
+    text-shadow: rgb(0, 0, 0, 05, 50, 50);
+    font-size: 14px;
+}
+.bankInputs .input-bank{
+    width: 195px;
+    height: 30px;
+    border: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 14px;
+}
+.bankInputs .input-bank:focus{
+    border-color: #fff;
+    border-bottom: 3px solid orange;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+.Form .input2{
+    width: 819px;
+    height: 30px;
+
+}
+.Form .input2:focus{
+    border-color: #fff;
+    border-bottom: 3px solid orange;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+div .inputimg{
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    width: 160px;
+    height: 150px;
+    border-radius:50%;
+}
+div .imgLabel{
+    margin-top: 10px;
+    margin-left: 58px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+.formBackground .logOffIcon{
+    height: 30px;
+    width: 30px;
+    color: rgb(255, 1, 1);
+    background-color: transparent;
+}
+.formBackground .logOffButton{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0 4px 8px 0  rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+}
+.formBackground .logOffButton:hover{
+    background-color: rgb(117, 117, 117);
+    border-color: transparent;
+
+}
+.fiIcon{
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    pointer-events: none;
+    background: transparent;
+    position: absolute;
+}
+div .imageInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 150px;
+    background: rgb(238, 238, 238);
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius:50%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 150px 147px;
+    margin-right: 25px;
+}
+.Form .textInput{
+    width: 398px;
+    height: 130px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: left;
+}
+.Form .textInput:focus{
+    border-color: #fff;
+    border: 2px solid orange;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+.Form .cardImg{
+    width: 242px;
+    height: 86px;
+}
+/* .casesBG .ongCard{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 550px;
+    top: 350px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 43px;
+} */
+.casesBG h3{
+    margin-top: 20px;
+    text-align: center;
+    border-bottom: 1.5px solid orange;
+    margin-bottom: 40px;
+}
+.casesBG .cardDiv .ongCard .card-body{
+    height: 150px;
+    width: 230px;
+    max-width: 230px;
+    max-height: 150;
+    min-width: 230px;
+    min-height: 150px;
+}
+.Form .label{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+.doeButton{
+    position: absolute;
+    top: 290px;
+    width: 242px;
+    height: 113.94px;
+    max-width: 242px;
+    max-height: 113.94px;
+}
+.utils .buttonUtils{
+    display: flex;
+    justify-content: space-between;
+    border: transparent;
+}
+.utils .ongUtil{
+    margin-left: 10px;
+    background-color: orange;
+}
+.Form .ongUtil{
+    border: transparent;
+    background-color: orange;
+
+}
+.all .casesBG{
+    width: 1500px;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-15%);
+    background-color: white;
+    opacity: 0.97;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 10px 10px 10px;
+    opacity: 0.9;
+}
+.all .formBackground .utils{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    background-color: #F3F3F3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.formBackground .edit{
+    display: flex;
+    justify-content: center;
+}
+.incidents{
+    margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardDiv{
+    margin-bottom: 10px;
+    margin-left: 15px;
+    max-width: 230px;
+    max-height: 150;
+}
+.all.casesBG .deleteBtn{
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+}
+.deleteBtn:hover{
+    color: red;
+    cursor: pointer;
+}
+
+div .imgPreview img{
+    margin-right: 94px;
+    width: 160px;
+    height: 150px;
+    border-radius: 50%;
+}

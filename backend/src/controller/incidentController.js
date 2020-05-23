@@ -11,9 +11,9 @@ module.exports={
     },
 
     async store(req, res){
-        const {title, description, valueGol} = req.body
+        const {title, description, incUrl, valueGol} = req.body;
 
-        const ong_id = req.headers.authorization
+        const ong_id = req.headers.authorization;
 
         if(!ong_id){
             res.status(401).json({error: "Operation not authorazed!"});
@@ -22,7 +22,8 @@ module.exports={
             title,
             description,
             valueGol,
-            ong_id
+            ong_id,
+            incUrl
         })
         return res.json({message: `O caso com o titulo: ${title} foi criado com o id:${id}`})
     },
@@ -30,8 +31,6 @@ module.exports={
     async delete(req,res){
         const { id } = req.params;
         const ong_id = req.headers.authorization;
-
-        //console.log(id,id_incident)
         
         const incident = await connection('incidents')
         .where('id',id)

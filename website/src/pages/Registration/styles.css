@@ -1,35 +1,86 @@
 
 .container-Registration{
     position: absolute;
-    margin: 80px 200px 100px 270px;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%,-50%);
     width: 800px;
-    height: 650px;
+    height: 850px;
     align-content: center;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 120px;
+    margin-bottom: 60px;
 }
 .container-Registration .header{
     margin-top: 80px;
     text-align: center;
 }
-
+.Avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+}
+.Avatar .Avatar-Icon{
+    width: 100px;
+    height: 100px;
+}
+.Avatar .EditIcon{
+    color: #777;
+    margin-top: 80px
+}
+.Avatar .EditIcon:hover{
+    color: rgb(39, 88, 248);
+    background-color: rgb(228, 228, 228);
+    border-radius: 50%;
+}
+.Avatar .Avatar-Input{
+    display: none;
+}
 .form .block-registration{
+    margin: 10px 85px 5px 85px;
     color: #333;
     font-size: 16px;
-    margin: 10px 85px 5px 85px;
+    opacity: 0.8;
 }
-.form .block-registration .input:hover{
-    border-bottom: 3px solid orange;
+.form .row .col .block-registration{
+    margin: 10px 10px 0px 85px;
+    width: 250px;
 }
 
+.form .row-2{
+    margin-left: 2px;
+}
+.form .row .col .block-4{
+    margin-left: 60px;
+}
+.form .row .block-5{
+    margin-right: 0px;
+    width: 250px;
+}
+.form .row .block-6{
+    margin-left: 125px;
+    width: 250px;
+}
+.form .block-7{
+    width: 630px;
+}
+.form .block-registration .input:focus{
+    color: black;
+    border-color: #fff;
+    border-bottom: 3px solid orange;
+    -webkit-box-shadow: none;
+    outline: none;
+}
 .form .button{
     margin-left: 265px;
     width: 250px;
     height: 50px;
     color: white;
     background-color: rgba(255, 172, 0, 0.9);
-    margin-top: 30px;
+    margin-top: 60px;
     opacity: 0.8;
 }
 
