@@ -3,9 +3,14 @@ import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom';
 
 import {Button,Form,Col} from 'react-bootstrap';
+import {Avatar} from '@material-ui/core';
+import Edit from '@material-ui/icons/Edit';
 import logo from '../../Assets/Caritas_Brand.png'
 import Title from '../../Assets/Escrita 1.png'
 import api from '../../services/api';
+import firebase from '../../utils/firebase';
+
+
 
 import './styles.css';
 
@@ -15,12 +20,29 @@ export default function Registration(){
     const [email, setEmail] = useState('');
     const [CNPJ, setCNPJ] = useState('');
     const [phone, setPhone] = useState('');
+    const [url,setUrl] = useState('');
     const [bankAgency, setBankAcency] = useState('');
     const [bankAccount, setBankAccount] = useState('');
     const [password, setPassword] = useState('');
 
     var history = useHistory();
 
+    async function handleImage(e){
+        e.preventDefault();
+        var file = e.target.files[0];
+        var storageReference = firebase.storage().ref('OngProfile/' + file.name);
+
+        await storageReference.put(file);
+
+        storageReference.getDownloadURL().then((message)=>{
+            /*This is the promise return that sends me the image url*/
+            setUrl(message);
+        })
+        .catch((err)=>{
+            console.log(err)
+        });
+
+    }
     async function handleResgiter(e){
         e.preventDefault();
 
@@ -31,9 +53,9 @@ export default function Registration(){
             phone,
             bankAgency,
             bankAccount,
+            url,
             password
         }
-
 
         try{
             const response = api.post('ongs',data);
@@ -53,6 +75,16 @@ export default function Registration(){
                 <img src={Title} alt=""/>
             </div>
             <Form className="form" onSubmit={handleResgiter}>
+                <Form.Group className="Avatar">
+                    <Avatar src={url} alt="" className="Avatar-Icon"/>
+                    <Form.Label for="inputFile" className="EditIcon"><Edit/></Form.Label>
+                    <Form.Control 
+                        type="file" 
+                        className="Avatar-Input" 
+                        id="inputFile"
+                        onChange={handleImage}
+                    />
+                </Form.Group> 
                 <Form.Group className="block-1 block-registration">
                             <Form.Label>Nome da ONG</Form.Label>
                             <Form.Control className="input" type="text" placeholder="Insira o nome da ONG"

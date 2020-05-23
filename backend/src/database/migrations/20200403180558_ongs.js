@@ -9,6 +9,7 @@ exports.up = function(knex) {
         table.string('phone',14).notNullable().unique();
         table.string('bankAgency').notNullable();
         table.string('bankAccount').notNullable().unique();
+        table.string('ImageUrl');
         table.string('password').notNullable();
     })
 };

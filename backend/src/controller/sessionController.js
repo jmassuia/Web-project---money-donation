@@ -7,7 +7,7 @@ module.exports = {
         const [ong] = await connection('ongs')
         .where('email',email)
         .andWhere('password',password)
-        .select('id','name','email','phone','bankAgency','bankAccount')
+        .select('id','name','email','phone','bankAgency','bankAccount','ImageUrl');
 
         if(!ong){
             return res.status(404).json({error:"ONG doesn't exists!!"})

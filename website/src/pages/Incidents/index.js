@@ -15,7 +15,6 @@ export default function Incident(){
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [valueGol, setValue] = useState(0);
-
     let history = useHistory();
 
     async function handleSubmit(e){
@@ -26,10 +25,11 @@ export default function Incident(){
         let descrip = document.getElementById("descrip")
 
         const ong_id = localStorage.getItem('ong_id');
-
+        const incUrl = localStorage.getItem('imgProfile');
         const data={
             title,
             description,
+            incUrl,
             valueGol
         }
             if(tit.value.length > 0 && val.value.length > 0 && descrip.value.length > 0){

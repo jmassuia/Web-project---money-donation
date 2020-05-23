@@ -93,13 +93,12 @@ export default function Home(){
             </div>
                 <h3>Conheça algumas de nossas ONG's</h3>
                 <div className="divcard">
-                    <ul className="listCards">
                     <CardDeck className="cardDeck">
                         {incidents.map(incident => (
                             <Card className="cards" key={incident.id}>
-                                <Card.Img className='carddimg' variant="top" src={logo} />
+                                <Card.Img className='carddimg' variant="top" src={incident.incUrl} />
                                 <Card.Body>
-                                    <span className='ongtitl'>{incident.name}</span>
+                                    <span className='ongtitl'>@{incident.name}</span>
                                     <Card.Title>{incident.title}</Card.Title>
                                     <Card.Text>
                                             <strong>Descrição:</strong>
@@ -117,27 +116,26 @@ export default function Home(){
                             </Card>
                     ))}
                     </CardDeck>
-                    </ul>
 
                 </div>
                 <Container className="footer-container">
-                <Row className="row">
-                    <Col className="col col1">
-                        <p>Copyright © 2020 | Caritas</p>
-                    </Col>
-                    <Col className="col col2">
-                        <a href="">
-                            <img src={facebookIcon} alt="facebook icon"/>
-                        </a>
-                        <a href="">
-                            <img src={instragramIcon} alt="facebook icon"/>
-                        </a>
-                        <a href="">
-                            <img src={twitterIcon} alt="facebook icon"/>
-                        </a>
-                    </Col>
-                </Row>
-            </Container>
+                    <Row className="row">
+                        <Col className="col col1">
+                            <p>Copyright © 2020 | Caritas</p>
+                        </Col>
+                        <Col className="col col2">
+                            <a href="">
+                                <img src={facebookIcon} alt="facebook icon"/>
+                            </a>
+                            <a href="">
+                                <img src={instragramIcon} alt="facebook icon"/>
+                            </a>
+                            <a href="">
+                                <img src={twitterIcon} alt="facebook icon"/>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
     </div>
     )
 }

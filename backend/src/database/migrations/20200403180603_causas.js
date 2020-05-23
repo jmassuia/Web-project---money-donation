@@ -8,8 +8,10 @@ exports.up = function(knex) {
         table.string('description').notNullable();
         table.decimal('valueGol').notNullable();
         table.string('ong_id').notNullable();
+        table.string('incUrl').notNullable();
 
         table.foreign('ong_id').references('id').inTable('ongs');
+        table.foreign('incUrl').references('ImageUrl').inTable('ongs');
     })
 
 };

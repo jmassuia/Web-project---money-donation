@@ -1,47 +1,24 @@
 import React, { useState, useEffect } from 'react'
 
-import { FiUpload, FiPower, FiTrash2 } from 'react-icons/fi'
+import { FiPower, FiTrash2 } from 'react-icons/fi'
 import { Button, Form, Card } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom';
 
-import logo from '../../Assets/Caritas_Brand.png'
-import Title from '../../Assets/Escrita 1.png'
-import logoCard from '../../Assets/LogoCard.png'
-import buttonImg from '../../Assets/Botão.png'
-import api from '../../services/api'
 
+import {Avatar} from '@material-ui/core';
+import api from '../../services/api'
 
 import './styles.css'
 
+
 export default function OngPage() {
 
-    /*const imgprev = document.getElementById('imgPrev')
-    imgprev.setAttribute('src', '')*/
-    const reader = new FileReader()
-    let onglogo = localStorage.getItem('url')
-    try {
-        onglogo = onglogo.replace(/\\/g, "/")
-
-        console.log("onglogo")
-
-    } catch (err) {
-        console.log(`Houve um erro: ${err}`)
-    }
-    console.log(onglogo)
     const ong_id = localStorage.getItem('ong_id'); //overwrite with localStorage.getItem('ong_id');
-    const [picture, setPicture] = useState([])
-    const [url, setUrl] = useState([]);
     const [incidents, setIncidents] = useState([]);
-
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [bankAgency, setAgency] = useState('');
-    const [bankAccount, setAccount] = useState('');
-    const [counter,setCounter] = useState(0);
-    const [ObjectArray,setObjectArray] = useState(['']);
-
     let history = useHistory();
+    var url = localStorage.getItem('imgProfile');
+
+    
     useEffect(() => {
         api.get('session', {
             headers: {
@@ -66,12 +43,6 @@ export default function OngPage() {
             alert('Erro ao deletar caso, tente novamente')
         }
     }
-
-    function onChangeHandler(e) {
-        setPicture([...picture, e.target.files[0]]);
-        setUrl([...url, URL.createObjectURL(e.target.files[0])]);
-    }
-
     async function dataUpdate(e) {
         const oname = document.getElementById('name').value
         const oemail = document.getElementById('email').value
@@ -105,25 +76,6 @@ export default function OngPage() {
         /*fileUploadHandler(e)*/
     }
 
-    async function fileUploadHandler(e) {
-        e.preventDefault();
-
-
-        const data = new FormData()
-        data.append('file', picture[0])
-        try {
-            const result = await api.post('updateImage', data, {
-                headers: {
-                    authorization: ong_id,
-                }
-            });
-            console.log(result);
-        }
-        catch (err) {
-            alert('Imagem muito grande');
-            console.log(err);
-        }
-    }
     function handleLogOff() {
         const ong_id = "" //overwrite to localStorage.clear("ong_id");
         localStorage.clear();
@@ -144,6 +96,10 @@ export default function OngPage() {
                     <Button className="ongUtil buttonUtils" onClick={handleNewIncident}> Novo Caso</Button>
                 </header>
                 <div className="edit">
+                    <Form.Group>
+                        <Avatar src={url} alt="" className="imageInput"></Avatar>
+                        <Form.Label className="imgLabel">Perfil</Form.Label>
+                    </Form.Group>
                     <Form className="Form" method="post">
                         <div className="flexInputs">
                             <Form.Group className="bankInputs">

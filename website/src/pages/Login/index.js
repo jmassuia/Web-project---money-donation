@@ -36,6 +36,7 @@ export default function Login(){
             localStorage.setItem('phone',response.data.ong.phone);
             localStorage.setItem('bankAgency',response.data.ong.bankAgency);
             localStorage.setItem('bankAccount',response.data.ong.bankAccount);
+            localStorage.setItem('imgProfile',response.data.ong.ImageUrl);
             history.push('/profile');
         }
         catch(err){

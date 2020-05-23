@@ -11,7 +11,7 @@ module.exports={
     },
 
     async store(req, res){
-        const {title, description, valueGol} = req.body;
+        const {title, description, incUrl, valueGol} = req.body;
 
         const ong_id = req.headers.authorization;
 
@@ -22,7 +22,8 @@ module.exports={
             title,
             description,
             valueGol,
-            ong_id
+            ong_id,
+            incUrl
         })
         return res.json({message: `O caso com o titulo: ${title} foi criado com o id:${id}`})
     },

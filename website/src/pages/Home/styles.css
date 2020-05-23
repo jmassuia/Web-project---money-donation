@@ -73,11 +73,12 @@ div .all{
 }
 .cardDeck{
     display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
     margin: 10px auto;
-    justify-content: center;
     background-color: white;
-    justify-content: center;
     width: 1120px;
+    height: auto;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 40px;
@@ -86,10 +87,19 @@ div .all{
 }
 .cards .carddimg{
     margin-top: 20px;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
 }
 .cards .ongtitl{
-    color: #777;
+    color:rgb(22, 157, 247);
     font-size: 14px;
+}
+.cards{
+    min-width: 250px;
+    max-width: 250px;
+    height: 450px;
+    max-height: 600px;
 }
 .carddimg{
     margin-top: 5px;
@@ -109,9 +119,6 @@ div .all{
     width: auto;
     background: none;
     border: none;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
 }
 div.all .divcard .cardDeck .cards{
     box-sizing: border-box;

@@ -5,7 +5,7 @@
     top: 50%; 
     transform: translate(-50%,-50%);
     width: 800px;
-    height: 750px;
+    height: 850px;
     align-content: center;
     background-color: white;
     border-radius: 8px;
@@ -17,7 +17,28 @@
     margin-top: 80px;
     text-align: center;
 }
-
+.Avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+}
+.Avatar .Avatar-Icon{
+    width: 100px;
+    height: 100px;
+}
+.Avatar .EditIcon{
+    color: #777;
+    margin-top: 80px
+}
+.Avatar .EditIcon:hover{
+    color: rgb(39, 88, 248);
+    background-color: rgb(228, 228, 228);
+    border-radius: 50%;
+}
+.Avatar .Avatar-Input{
+    display: none;
+}
 .form .block-registration{
     margin: 10px 85px 5px 85px;
     color: #333;
