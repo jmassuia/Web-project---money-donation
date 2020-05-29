@@ -8,6 +8,7 @@ import Registration from './pages/Registration'
 import OngPage from './pages/OngPage'
 import Incident from './pages/Incidents'
 
+
 export default function Routes(){
 
     return(
@@ -18,6 +19,7 @@ export default function Routes(){
                 <Route path="/newONG" component={Registration}/>
                 <Route path="/profile" component={OngPage}/>
                 <Route path="/incident" component={Incident}/>
+
             </Switch>
         </BrowserRouter>
     );
