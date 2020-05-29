@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-
 import './styles.css';
 
 import {Card, Nav, Navbar,Carousel,CardDeck,Container,Row,Col,Popover,OverlayTrigger} from 'react-bootstrap';
@@ -9,12 +8,13 @@ import api from '../../services/api';
 
 import facebookIcon from '../../Assets/Facebook icon.png'; 
 import instragramIcon from '../../Assets/Instagram icon.png';
-import twitterIcon from '../../Assets/Twitter icon.png'
-import donateButton from '../../Assets/Botão.png'
+import twitterIcon from '../../Assets/Twitter icon.png';
+import donateButton from '../../Assets/Botão.png';
 
 export default function Home(){
     const [incidents, setIncidents] = useState([]);
     const [paymentURL,setPaymentURL] = useState([]);
+
 
     useEffect(()=>{
         api.get('incident')
@@ -35,19 +35,13 @@ export default function Home(){
         try{
             const response = await api.post('donation',data);
             setPaymentURL(response.data.url);
+             
         }
         catch(err){
             console.log(err);
         }
+        window.open(`${paymentURL}`,'DonateWindow',"width=700,height=700");
     }
-    const popover =(
-        <Popover id="popover-basic">
-                <Popover.Title as="h3">Link para doação:</Popover.Title>
-                <Popover.Content>
-                    Clique no <a href={paymentURL}>link</a> para finalizar a doação!
-                </Popover.Content>
-        </Popover>
-    );
     return (
         <div className="all" id="home">
                     <Navbar className="navbar fixed-top" expand="xl" collapseOnSelect variant="light">
@@ -107,12 +101,9 @@ export default function Home(){
                                             <p>R${incident.valueGol}</p>
                                     </Card.Text>
                                 </Card.Body>
-                                <OverlayTrigger trigger="click" overlay={popover}>
                                     <button type="submit" onClick={()=>handleDonate(incident.name,incident.title,incident.description,incident.valueGol)}>
                                         <img src={donateButton} alt=""/>
                                     </button>
-                                </OverlayTrigger>
-
                             </Card>
                     ))}
                     </CardDeck>

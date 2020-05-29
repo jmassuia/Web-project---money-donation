@@ -2,6 +2,7 @@
     padding:0;
     border:0;
     max-width: 1120px;
+    -webkit-animation: none;
 }
 div .all{
     display: flex;
@@ -109,6 +110,7 @@ div .all{
 }
 .cards button{
     border-radius: 47px;
+    color: transparent;
 }
 .carousel{ 
     all:unset;
@@ -131,6 +133,9 @@ div.all .divcard .cardDeck .cards{
     border: 1px solid rgba(0,0,0,.125);
     box-shadow: 5px 10px 18px #9999;
     border-radius: 45px;
+}
+div.all .divcard .cardDeck .cards:hover{
+    background-image: linear-gradient(rgb(214, 212, 212),rgb(235,235,235));
 }
 .listCards{
     flex-wrap: wrap;

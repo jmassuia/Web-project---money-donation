@@ -30,6 +30,7 @@ export default function Registration(){
     async function handleImage(e){
         e.preventDefault();
         var file = e.target.files[0];
+        console.log(file);
         var storageReference = firebase.storage().ref('OngProfile/' + file.name);
 
         await storageReference.put(file);
