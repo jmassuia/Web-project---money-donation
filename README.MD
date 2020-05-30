@@ -9,7 +9,7 @@
   The purpose is to create a host website that act with payment ways for NGOs.
 
 ## Requirements:
- If you clone or fork this project, you will need to install all the node_modules depencies. So, it's required to have node and package managers, as npm or yarn, dependencies configured.
+ If you clone or fork this project, you will need to install all the node_modules depencies. So, it's required to have node and package managers, as npm or yarn, installed and configured.
  
  You could use the commands below to set up the package init the package manager inside:
 
