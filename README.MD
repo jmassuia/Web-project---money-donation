@@ -44,3 +44,20 @@ yarn: yarn init
  
  The webpage design was done using figma, which is a good interface design tool. In advance to get in touch with the community trends, we used reactjs to develop the whole interface, using hooks instead of creating react classes. As consequence, the team performance was amazing and we could finish it faster than imagined.
  
+## :camera: Pages
+### Home
+<img src='https://i.ibb.co/hHXXphk/Main-Page1.png'/>
+<img src='https://i.ibb.co/Dry2FMB/Main-Page2.png'/>
+
+### Login
+<img src='https://i.ibb.co/bXsMhkc/Login.png'/>
+
+### Ong Register
+<img src='https://i.ibb.co/pJfq2Vv/Ong-Register.png'/>
+
+### Ong Profile
+<img src='https://i.ibb.co/jfrS9ZR/Ong-Profile1.png'/>
+<img src='https://i.ibb.co/6tmQK5V/Ong-Profile2.png'/>
+
+### Incident Register
+<img src='https://i.ibb.co/KF3m687/Incident-Register.png'/>
