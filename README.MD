@@ -46,18 +46,18 @@ yarn: yarn init
  
 ## :camera: Pages
 ### Home
-<img src='https://i.ibb.co/hHXXphk/Main-Page1.png'/>
-<img src='https://i.ibb.co/Dry2FMB/Main-Page2.png'/>
+<img src='https://www.imagemhost.com.br/images/2020/05/30/MainPage1-min.png' alt='MainPage#1'/>
+<img src='https://www.imagemhost.com.br/images/2020/05/30/MainPage2.png' alt='MainPage#2'/>
 
 ### Login
-<img src='https://i.ibb.co/bXsMhkc/Login.png'/>
+<img src='https://www.imagemhost.com.br/images/2020/05/30/Login.png' alt='LoginPage'/>
 
 ### Ong Register
-<img src='https://i.ibb.co/pJfq2Vv/Ong-Register.png'/>
+<img src='https://www.imagemhost.com.br/images/2020/05/30/OngRegister.png' alt='RegisterPage'/>
 
 ### Ong Profile
-<img src='https://i.ibb.co/jfrS9ZR/Ong-Profile1.png'/>
-<img src='https://i.ibb.co/6tmQK5V/Ong-Profile2.png'/>
+<img src='https://www.imagemhost.com.br/images/2020/05/30/OngProfile1.png' alt='OngProfilePage#1'/>
+<img src='https://www.imagemhost.com.br/images/2020/05/30/OngProfile2.png' alt='OngProfilePage#2'/>
 
 ### Incident Register
-<img src='https://i.ibb.co/KF3m687/Incident-Register.png'/>
+<img src='https://www.imagemhost.com.br/images/2020/05/30/IncidentRegister.png' alt='IncidentRegisterPage'/>
